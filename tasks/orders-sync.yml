@@ -1,0 +1,37 @@
+taskName: OrdersSync
+sqlConnectionString: "Server=.;Database=testDb;User Id=sa;Password=Passw0rd;TrustServerCertificate=True"
+query: |
+  SELECT [fID]
+  ,[fStoreIN]
+  ,[fSubStoreIN]
+  ,[fCustID]
+  ,[fStoreOut]
+  ,[fSubStoreOut]
+  ,[fDate]
+  ,[fDesc]
+  ,[fPosted]
+  ,[fType]
+  ,[fSupID]
+  ,[fUserID]
+  ,[CostCenterID]
+  ,[ValidUntil]
+  ,[StatusID]
+  ,[SubType]
+  ,[PostedDate]
+  ,[PostedUser]
+  ,[RequestedDeliveryDate]
+  ,[ManualSalesOrderNo]
+  FROM [dbo].[tblOrders]
+  where fDate >@LastRunTime
+
+elasticsearchUrl: "http://localhost:9200"
+indexName: orders
+trackingColumnName: fDate
+defaultTrackingValue: "2000-01-01 00:00:00"
+trackingValueType: DateTime
+idColumnName: fID
+cronExpression: "* * * * *"
+batchSize: 1000
+isEnabled: true
+logFile: "logs/orders/orders-sync-.log"
+stateFile: "state/orders-sync.json"

@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  etl-service:
+    build: .
+    container_name: etl-service
+    environment:
+      - DOTNET_ENVIRONMENT=Production
+    volumes:
+      - ./logs:/app/logs
+      - ./state:/app/state
+      - ./appsettings.yml:/app/appsettings.yml:ro
+      - ./tasks:/app/tasks:ro
+    networks:
+      - etl-network
+    restart: unless-stopped
+    depends_on:
+      elasticsearch:
+        condition: service_healthy
+      sqlserver:
+        condition: service_healthy
+
+volumes:
+  elasticsearch-data:
+    driver: local
+  sqlserver-data:
+    driver: local
+
+networks:
+  etl-network:
+    driver: bridge

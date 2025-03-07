@@ -1,0 +1,24 @@
+[Unit]
+Description=ETL Service for SQL to Elasticsearch
+After=network.target
+
+[Service]
+Type=notify
+User=etlservice
+Group=etlservice
+WorkingDirectory=/opt/etldotnet
+ExecStart=/usr/bin/dotnet /opt/etldotnet/EtlDotnet.dll
+Restart=always
+RestartSec=10
+SyslogIdentifier=etldotnet
+Environment=DOTNET_ENVIRONMENT=Production
+
+# Set up proper directories with correct permissions
+ExecStartPre=/bin/mkdir -p /opt/etldotnet/logs/customers
+ExecStartPre=/bin/mkdir -p /opt/etldotnet/logs/orders
+ExecStartPre=/bin/mkdir -p /opt/etldotnet/state/orders
+ExecStartPre=/bin/chown -R etlservice:etlservice /opt/etldotnet/logs
+ExecStartPre=/bin/chown -R etlservice:etlservice /opt/etldotnet/state
+
+[Install]
+WantedBy=multi-user.target

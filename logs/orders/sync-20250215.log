@@ -1,0 +1,938 @@
+2025-02-15 02:26:20.562 [INF] OrdersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 02:26:35.695 [ERR] OrdersSync Error occurred while processing task
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+ ---> System.ComponentModel.Win32Exception (53): The network path was not found.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at EtlDotnet.Worker.ProcessTaskDataAsync(TaskConfig taskConfig, String lastValue, CancellationToken stoppingToken) in D:\os\EtlDotnet\Worker.cs:line 188
+   at EtlDotnet.Worker.RunTaskAsync(TaskConfig taskConfig, CancellationToken stoppingToken) in D:\os\EtlDotnet\Worker.cs:line 147
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+2025-02-15 02:27:35.753 [INF] OrdersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 02:27:56.249 [ERR] OrdersSync Error occurred while processing task
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+ ---> System.ComponentModel.Win32Exception (53): The network path was not found.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at EtlDotnet.Worker.ProcessTaskDataAsync(TaskConfig taskConfig, String lastValue, CancellationToken stoppingToken) in D:\os\EtlDotnet\Worker.cs:line 188
+   at EtlDotnet.Worker.RunTaskAsync(TaskConfig taskConfig, CancellationToken stoppingToken) in D:\os\EtlDotnet\Worker.cs:line 147
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+2025-02-15 02:28:44.808 [INF] OrdersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 02:28:59.179 [ERR] OrdersSync Error occurred while processing task
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+ ---> System.ComponentModel.Win32Exception (53): The network path was not found.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at EtlDotnet.Worker.ProcessTaskDataAsync(TaskConfig taskConfig, String lastValue, CancellationToken stoppingToken) in D:\os\EtlDotnet\Worker.cs:line 188
+   at EtlDotnet.Worker.RunTaskAsync(TaskConfig taskConfig, CancellationToken stoppingToken) in D:\os\EtlDotnet\Worker.cs:line 147
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+2025-02-15 02:30:13.183 [INF] OrdersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 02:30:13.240 [ERR] OrdersSync Error occurred while processing task
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+ ---> System.ComponentModel.Win32Exception (53): The network path was not found.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.InternalOpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at EtlDotnet.Worker.ProcessTaskDataAsync(TaskConfig taskConfig, String lastValue, CancellationToken stoppingToken) in D:\os\EtlDotnet\Worker.cs:line 188
+   at EtlDotnet.Worker.RunTaskAsync(TaskConfig taskConfig, CancellationToken stoppingToken) in D:\os\EtlDotnet\Worker.cs:line 147
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+2025-02-15 02:32:08.028 [INF] OrdersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 02:32:11.567 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:11.867 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:12.222 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:12.539 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:12.810 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:13.008 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:13.185 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:13.412 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:13.589 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:13.784 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:14.066 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:14.254 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:14.425 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:14.602 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:14.901 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:15.211 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:15.497 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:15.711 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:15.890 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:16.058 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:16.291 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:16.520 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:16.715 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:16.928 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:17.128 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:17.331 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:17.507 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:17.729 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:17.946 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:18.129 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:18.381 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:18.788 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:18.988 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:19.209 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:19.486 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:19.764 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:19.961 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:20.239 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:20.467 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:20.739 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:20.937 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:21.137 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:21.322 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:21.514 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:21.711 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:21.961 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:22.173 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:22.343 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:22.507 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:22.735 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:22.931 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:23.145 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:23.380 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:23.566 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:23.737 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:23.933 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:24.112 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:24.277 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:24.457 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:24.653 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:24.973 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:25.229 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:25.414 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:25.596 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:25.830 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:26.016 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:26.229 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:26.438 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:26.758 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:27.041 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:27.385 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:27.596 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:27.800 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:28.017 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:28.254 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:28.457 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:28.670 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:28.913 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:29.130 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:29.344 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:29.600 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:29.939 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:30.239 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:30.518 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:30.730 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:30.945 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:31.192 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:31.424 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:31.629 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:31.832 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:32.047 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:32.267 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:32.561 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:32.973 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:33.230 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:33.464 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:33.660 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:33.859 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:34.118 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:34.418 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:34.651 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:34.897 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:35.104 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:35.281 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:35.463 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:35.678 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:35.873 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:36.097 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:36.304 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:36.466 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:36.701 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:36.933 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:37.196 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:37.381 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:37.649 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:37.924 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:38.095 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:38.313 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:38.525 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:38.722 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:39.003 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:39.247 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:39.494 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:39.695 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:39.907 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:40.071 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:40.253 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:40.430 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:40.610 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:40.835 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:41.044 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:41.241 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:41.492 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:41.709 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:41.924 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:42.123 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:42.299 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:42.486 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:42.673 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:42.880 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:43.059 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:43.246 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:43.438 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:43.647 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:43.838 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:44.030 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:44.222 [INF] OrdersSync Processed 500 records
+2025-02-15 02:32:44.404 [INF] OrdersSync Processed 500 records
+2025-02-15 02:34:32.474 [INF] OrdersSync Processed final 476 records
+2025-02-15 02:34:32.474 [INF] OrdersSync Task completed successfully
+2025-02-15 02:34:32.475 [INF] OrdersSync Next run scheduled for: "2025-02-15T00:35:00.0000000Z"
+2025-02-15 02:35:00.011 [INF] OrdersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 02:35:03.859 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:04.034 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:04.229 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:04.426 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:04.604 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:04.869 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:05.106 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:05.297 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:05.506 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:05.692 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:05.890 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:06.061 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:06.252 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:06.451 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:06.627 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:06.856 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:07.075 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:07.288 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:07.635 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:08.067 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:08.390 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:08.843 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:09.066 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:09.306 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:09.618 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:09.845 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:10.094 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:10.280 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:10.459 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:10.659 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:10.833 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:11.030 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:11.241 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:11.435 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:11.619 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:11.804 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:12.023 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:12.289 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:12.517 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:12.721 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:12.927 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:13.140 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:13.460 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:13.728 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:15.837 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:16.242 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:16.513 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:16.846 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:17.098 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:17.347 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:17.660 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:17.903 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:18.125 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:18.326 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:18.577 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:32.680 [INF] OrdersSync Starting task execution. Last tracking value: 07/16/2021 00:00:00
+2025-02-15 02:35:33.680 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:34.146 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:34.493 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:34.881 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:35.246 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:47.258 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:47.502 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:47.804 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:48.080 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:48.401 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:48.630 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:48.958 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:49.146 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:49.386 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:49.586 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:49.879 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:50.056 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:50.273 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:50.534 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:50.790 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:51.132 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:51.408 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:51.652 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:51.994 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:52.293 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:52.486 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:52.681 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:52.860 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:53.035 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:53.237 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:53.419 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:53.619 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:53.864 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:54.143 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:54.420 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:54.636 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:54.850 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:55.163 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:55.477 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:55.675 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:55.889 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:56.097 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:56.340 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:56.580 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:56.825 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:57.023 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:57.218 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:57.506 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:57.756 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:57.989 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:58.194 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:58.368 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:58.561 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:58.728 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:58.914 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:59.119 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:59.351 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:59.604 [INF] OrdersSync Processed 500 records
+2025-02-15 02:35:59.893 [INF] OrdersSync Processed 500 records
+2025-02-15 02:36:00.182 [INF] OrdersSync Processed 500 records
+2025-02-15 02:36:00.432 [INF] OrdersSync Processed 500 records
+2025-02-15 02:36:00.655 [INF] OrdersSync Processed 500 records
+2025-02-15 02:36:00.858 [INF] OrdersSync Processed 500 records
+2025-02-15 02:36:01.076 [INF] OrdersSync Processed 500 records
+2025-02-15 02:36:01.324 [INF] OrdersSync Processed 500 records
+2025-02-15 02:36:01.529 [INF] OrdersSync Processed 500 records
+2025-02-15 02:36:01.712 [INF] OrdersSync Processed 500 records
+2025-02-15 02:36:01.887 [INF] OrdersSync Processed 500 records
+2025-02-15 02:36:02.099 [INF] OrdersSync Processed 500 records
+2025-02-15 02:36:02.324 [INF] OrdersSync Processed 500 records
+2025-02-15 02:36:02.559 [INF] OrdersSync Processed 500 records
+2025-02-15 02:36:02.813 [INF] OrdersSync Processed 500 records
+2025-02-15 02:36:03.006 [INF] OrdersSync Processed 500 records
+2025-02-15 02:36:03.196 [INF] OrdersSync Processed 500 records
+2025-02-15 02:36:03.378 [INF] OrdersSync Processed 500 records
+2025-02-15 02:36:03.566 [INF] OrdersSync Processed 500 records
+2025-02-15 02:36:03.789 [INF] OrdersSync Processed 500 records
+2025-02-15 02:36:04.062 [INF] OrdersSync Processed 500 records
+2025-02-15 02:36:04.271 [INF] OrdersSync Processed 500 records
+2025-02-15 02:36:04.484 [INF] OrdersSync Processed 500 records
+2025-02-15 02:36:04.681 [INF] OrdersSync Processed 500 records
+2025-02-15 02:36:04.866 [INF] OrdersSync Processed 500 records
+2025-02-15 02:36:05.116 [INF] OrdersSync Processed 500 records
+2025-02-15 02:36:05.326 [INF] OrdersSync Processed 500 records
+2025-02-15 02:36:05.520 [INF] OrdersSync Processed 500 records
+2025-02-15 02:36:05.736 [INF] OrdersSync Processed 500 records
+2025-02-15 02:36:05.987 [INF] OrdersSync Processed 500 records
+2025-02-15 02:36:06.232 [INF] OrdersSync Processed 500 records
+2025-02-15 02:36:06.531 [INF] OrdersSync Processed 500 records
+2025-02-15 02:36:06.750 [INF] OrdersSync Processed 500 records
+2025-02-15 02:36:07.077 [INF] OrdersSync Processed 500 records
+2025-02-15 02:36:07.558 [INF] OrdersSync Processed 500 records
+2025-02-15 02:36:07.810 [INF] OrdersSync Processed 500 records
+2025-02-15 02:36:08.088 [INF] OrdersSync Processed final 373 records
+2025-02-15 02:36:08.089 [INF] OrdersSync Task completed successfully
+2025-02-15 02:36:08.089 [INF] OrdersSync Next run scheduled for: "2025-02-15T00:37:00.0000000Z"
+2025-02-15 02:37:00.011 [INF] OrdersSync Starting task execution. Last tracking value: 07/16/2021 00:00:00
+2025-02-15 02:37:00.323 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:00.559 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:00.778 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:00.989 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:01.196 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:01.398 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:01.582 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:01.775 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:01.948 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:02.131 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:02.317 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:02.563 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:02.835 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:03.056 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:03.240 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:03.422 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:03.634 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:03.924 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:04.175 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:04.381 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:04.579 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:04.772 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:04.968 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:05.278 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:05.463 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:05.655 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:05.836 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:06.013 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:06.206 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:06.396 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:06.587 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:06.761 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:06.932 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:07.119 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:07.297 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:07.475 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:07.655 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:07.847 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:08.027 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:08.218 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:08.429 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:08.713 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:08.932 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:09.178 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:09.409 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:09.629 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:09.812 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:09.993 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:10.163 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:10.329 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:10.501 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:10.684 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:10.853 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:11.051 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:11.217 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:11.386 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:11.562 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:11.765 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:11.945 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:12.115 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:12.290 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:12.457 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:12.642 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:12.828 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:12.996 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:13.194 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:13.362 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:13.552 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:13.761 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:13.949 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:14.132 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:14.300 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:14.512 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:14.710 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:14.904 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:15.136 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:15.372 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:15.555 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:15.774 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:15.999 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:16.176 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:16.378 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:16.551 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:16.739 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:16.927 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:17.114 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:17.293 [INF] OrdersSync Processed 500 records
+2025-02-15 02:37:17.506 [INF] OrdersSync Processed 500 records
+2025-02-15 02:38:52.175 [INF] OrdersSync Starting task execution. Last tracking value: 05/16/2024 00:00:00
+2025-02-15 02:38:53.182 [INF] OrdersSync Processed 500 records
+2025-02-15 02:38:53.445 [INF] OrdersSync Processed 500 records
+2025-02-15 02:38:53.702 [INF] OrdersSync Processed 500 records
+2025-02-15 02:38:53.968 [INF] OrdersSync Processed 500 records
+2025-02-15 02:38:54.274 [INF] OrdersSync Processed 500 records
+2025-02-15 02:38:54.425 [INF] OrdersSync Processed final 345 records
+2025-02-15 02:38:54.425 [INF] OrdersSync Task completed successfully
+2025-02-15 02:38:54.426 [INF] OrdersSync Next run scheduled for: "2025-02-15T00:39:00.0000000Z"
+2025-02-15 02:38:59.999 [INF] OrdersSync Starting task execution. Last tracking value: 05/16/2024 00:00:00
+2025-02-15 02:39:01.169 [INF] OrdersSync Processed 500 records
+2025-02-15 02:39:01.670 [INF] OrdersSync Processed 500 records
+2025-02-15 02:39:01.909 [INF] OrdersSync Processed 500 records
+2025-02-15 02:39:02.099 [INF] OrdersSync Processed 500 records
+2025-02-15 02:39:02.314 [INF] OrdersSync Processed 500 records
+2025-02-15 02:39:02.505 [INF] OrdersSync Processed final 345 records
+2025-02-15 02:39:02.506 [INF] OrdersSync Task completed successfully
+2025-02-15 02:39:02.506 [INF] OrdersSync Next run scheduled for: "2025-02-15T00:40:00.0000000Z"
+2025-02-15 02:40:00.012 [INF] OrdersSync Starting task execution. Last tracking value: 05/16/2024 00:00:00
+2025-02-15 02:40:00.241 [INF] OrdersSync Processed 500 records
+2025-02-15 02:40:00.526 [INF] OrdersSync Processed 500 records
+2025-02-15 02:40:00.792 [INF] OrdersSync Processed 500 records
+2025-02-15 02:40:00.996 [INF] OrdersSync Processed 500 records
+2025-02-15 02:40:01.218 [INF] OrdersSync Processed 500 records
+2025-02-15 02:40:01.343 [INF] OrdersSync Processed final 345 records
+2025-02-15 02:40:01.344 [INF] OrdersSync Task completed successfully
+2025-02-15 02:40:01.344 [INF] OrdersSync Next run scheduled for: "2025-02-15T00:41:00.0000000Z"
+2025-02-15 02:41:00.009 [INF] OrdersSync Starting task execution. Last tracking value: 05/16/2024 00:00:00
+2025-02-15 02:41:00.317 [INF] OrdersSync Processed 500 records
+2025-02-15 02:41:00.490 [INF] OrdersSync Processed 500 records
+2025-02-15 02:41:00.691 [INF] OrdersSync Processed 500 records
+2025-02-15 02:41:00.866 [INF] OrdersSync Processed 500 records
+2025-02-15 02:41:01.038 [INF] OrdersSync Processed 500 records
+2025-02-15 02:41:01.170 [INF] OrdersSync Processed final 345 records
+2025-02-15 02:41:01.171 [INF] OrdersSync Task completed successfully
+2025-02-15 02:41:01.171 [INF] OrdersSync Next run scheduled for: "2025-02-15T00:42:00.0000000Z"
+2025-02-15 02:42:00.007 [INF] OrdersSync Starting task execution. Last tracking value: 05/16/2024 00:00:00
+2025-02-15 02:42:00.213 [INF] OrdersSync Processed 500 records
+2025-02-15 02:42:00.392 [INF] OrdersSync Processed 500 records
+2025-02-15 02:42:00.595 [INF] OrdersSync Processed 500 records
+2025-02-15 02:42:00.817 [INF] OrdersSync Processed 500 records
+2025-02-15 02:42:01.025 [INF] OrdersSync Processed 500 records
+2025-02-15 02:42:01.158 [INF] OrdersSync Processed final 345 records
+2025-02-15 02:42:01.158 [INF] OrdersSync Task completed successfully
+2025-02-15 02:42:01.158 [INF] OrdersSync Next run scheduled for: "2025-02-15T00:43:00.0000000Z"
+2025-02-15 02:43:00.003 [INF] OrdersSync Starting task execution. Last tracking value: 05/16/2024 00:00:00
+2025-02-15 02:43:00.225 [INF] OrdersSync Processed 500 records
+2025-02-15 02:43:00.399 [INF] OrdersSync Processed 500 records
+2025-02-15 02:43:00.567 [INF] OrdersSync Processed 500 records
+2025-02-15 02:43:00.731 [INF] OrdersSync Processed 500 records
+2025-02-15 02:43:00.928 [INF] OrdersSync Processed 500 records
+2025-02-15 02:43:01.079 [INF] OrdersSync Processed final 345 records
+2025-02-15 02:43:01.080 [INF] OrdersSync Task completed successfully
+2025-02-15 02:43:01.080 [INF] OrdersSync Next run scheduled for: "2025-02-15T00:44:00.0000000Z"
+2025-02-15 02:44:00.005 [INF] OrdersSync Starting task execution. Last tracking value: 05/16/2024 00:00:00
+2025-02-15 02:44:00.225 [INF] OrdersSync Processed 500 records
+2025-02-15 02:44:00.429 [INF] OrdersSync Processed 500 records
+2025-02-15 02:44:00.671 [INF] OrdersSync Processed 500 records
+2025-02-15 02:44:00.870 [INF] OrdersSync Processed 500 records
+2025-02-15 02:44:01.053 [INF] OrdersSync Processed 500 records
+2025-02-15 02:44:01.201 [INF] OrdersSync Processed final 345 records
+2025-02-15 02:44:01.201 [INF] OrdersSync Task completed successfully
+2025-02-15 02:44:01.201 [INF] OrdersSync Next run scheduled for: "2025-02-15T00:45:00.0000000Z"
+2025-02-15 02:44:47.471 [INF] OrdersSync Starting task execution. Last tracking value: 08/23/2024 00:00:00
+2025-02-15 02:44:47.715 [INF] OrdersSync Task completed successfully
+2025-02-15 02:44:47.717 [INF] OrdersSync Next run scheduled for: "2025-02-15T00:45:00.0000000Z"
+2025-02-15 02:45:00.011 [INF] OrdersSync Starting task execution. Last tracking value: 08/23/2024 00:00:00
+2025-02-15 02:45:00.046 [INF] OrdersSync Task completed successfully
+2025-02-15 02:45:00.046 [INF] OrdersSync Next run scheduled for: "2025-02-15T00:46:00.0000000Z"
+2025-02-15 02:46:09.707 [INF] OrdersSync Starting task execution. Last tracking value: 08/23/2024 00:00:00
+2025-02-15 02:46:37.907 [INF] OrdersSync Task completed successfully
+2025-02-15 02:46:37.914 [INF] OrdersSync Next run scheduled for: "2025-02-15T00:47:00.0000000Z"
+2025-02-15 02:47:00.014 [INF] OrdersSync Starting task execution. Last tracking value: 08/23/2024 00:00:00
+2025-02-15 02:47:38.084 [INF] OrdersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 02:47:39.898 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:40.221 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:40.543 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:40.801 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:41.255 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:41.603 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:41.893 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:42.157 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:42.481 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:42.815 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:43.094 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:43.306 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:43.642 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:43.843 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:44.075 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:44.295 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:44.486 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:44.687 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:44.957 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:45.218 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:45.618 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:45.907 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:46.111 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:46.377 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:46.609 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:46.853 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:47.094 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:47.376 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:47.583 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:47.964 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:48.259 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:48.611 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:48.909 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:49.173 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:49.411 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:49.629 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:49.862 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:50.084 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:50.409 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:50.626 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:50.809 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:51.015 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:51.192 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:51.379 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:51.568 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:51.764 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:51.980 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:52.145 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:52.320 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:52.498 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:52.698 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:52.905 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:53.111 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:53.366 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:53.557 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:53.766 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:53.962 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:54.215 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:54.524 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:54.794 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:55.038 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:55.214 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:55.431 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:55.764 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:55.981 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:56.254 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:56.499 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:56.685 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:56.876 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:57.068 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:57.302 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:57.573 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:57.884 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:58.130 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:58.366 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:58.583 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:58.802 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:59.002 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:59.244 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:59.481 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:59.679 [INF] OrdersSync Processed 500 records
+2025-02-15 02:47:59.973 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:08.673 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:08.900 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:09.083 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:09.282 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:09.469 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:09.684 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:09.905 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:10.101 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:10.300 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:10.471 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:10.676 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:10.868 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:11.119 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:11.396 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:11.612 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:11.825 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:12.022 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:12.318 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:12.551 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:12.787 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:13.011 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:13.190 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:13.373 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:13.577 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:13.786 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:13.988 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:14.201 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:14.401 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:14.602 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:14.775 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:14.974 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:15.179 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:15.404 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:15.693 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:15.911 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:16.156 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:16.362 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:16.568 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:16.764 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:16.939 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:17.228 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:17.454 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:17.688 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:17.890 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:18.078 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:18.275 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:18.461 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:18.710 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:18.917 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:19.169 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:19.381 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:19.587 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:19.791 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:19.991 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:20.177 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:20.359 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:20.551 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:20.739 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:20.936 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:21.133 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:21.324 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:21.522 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:21.737 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:21.936 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:22.146 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:22.324 [INF] OrdersSync Processed 500 records
+2025-02-15 02:48:22.533 [INF] OrdersSync Processed final 476 records
+2025-02-15 02:48:22.534 [INF] OrdersSync Task completed successfully
+2025-02-15 02:48:22.535 [INF] OrdersSync Next run scheduled for: "2025-02-15T00:49:00.0000000Z"
+2025-02-15 02:49:00.010 [INF] OrdersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 02:49:00.059 [INF] OrdersSync Task completed successfully
+2025-02-15 02:49:00.059 [INF] OrdersSync Next run scheduled for: "2025-02-15T00:50:00.0000000Z"
+2025-02-15 02:50:00.007 [INF] OrdersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 02:50:00.046 [INF] OrdersSync Task completed successfully
+2025-02-15 02:50:00.048 [INF] OrdersSync Next run scheduled for: "2025-02-15T00:51:00.0000000Z"
+2025-02-15 02:50:59.997 [INF] OrdersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 02:51:00.058 [INF] OrdersSync Task completed successfully
+2025-02-15 02:51:00.058 [INF] OrdersSync Next run scheduled for: "2025-02-15T00:52:00.0000000Z"
+2025-02-15 02:52:00.012 [INF] OrdersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 02:52:00.047 [INF] OrdersSync Task completed successfully
+2025-02-15 02:52:00.047 [INF] OrdersSync Next run scheduled for: "2025-02-15T00:53:00.0000000Z"
+2025-02-15 02:53:00.008 [INF] OrdersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 02:53:00.052 [INF] OrdersSync Task completed successfully
+2025-02-15 02:53:00.052 [INF] OrdersSync Next run scheduled for: "2025-02-15T00:54:00.0000000Z"
+2025-02-15 02:54:00.006 [INF] OrdersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 02:54:00.035 [INF] OrdersSync Task completed successfully
+2025-02-15 02:54:00.035 [INF] OrdersSync Next run scheduled for: "2025-02-15T00:55:00.0000000Z"
+2025-02-15 02:55:00.006 [INF] OrdersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 02:55:00.044 [INF] OrdersSync Task completed successfully
+2025-02-15 02:55:00.044 [INF] OrdersSync Next run scheduled for: "2025-02-15T00:56:00.0000000Z"
+2025-02-15 02:56:00.012 [INF] OrdersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 02:56:00.043 [INF] OrdersSync Task completed successfully
+2025-02-15 02:56:00.043 [INF] OrdersSync Next run scheduled for: "2025-02-15T00:57:00.0000000Z"
+2025-02-15 02:57:31.829 [INF] OrdersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 02:57:41.636 [INF] OrdersSync Processed batch of 500 records. Total processed: 500
+2025-02-15 02:57:41.825 [INF] OrdersSync Processed batch of 500 records. Total processed: 1000
+2025-02-15 02:57:41.992 [INF] OrdersSync Processed batch of 500 records. Total processed: 1500
+2025-02-15 02:57:42.141 [INF] OrdersSync Processed batch of 500 records. Total processed: 2000
+2025-02-15 02:57:42.359 [INF] OrdersSync Processed batch of 500 records. Total processed: 2500
+2025-02-15 02:57:42.563 [INF] OrdersSync Processed batch of 500 records. Total processed: 3000
+2025-02-15 02:57:42.822 [INF] OrdersSync Processed batch of 500 records. Total processed: 3500
+2025-02-15 02:57:43.030 [INF] OrdersSync Processed batch of 500 records. Total processed: 4000
+2025-02-15 02:57:43.253 [INF] OrdersSync Processed batch of 500 records. Total processed: 4500
+2025-02-15 02:57:43.402 [INF] OrdersSync Processed batch of 500 records. Total processed: 5000
+2025-02-15 02:57:43.575 [INF] OrdersSync Processed batch of 500 records. Total processed: 5500
+2025-02-15 02:57:43.745 [INF] OrdersSync Processed batch of 500 records. Total processed: 6000
+2025-02-15 02:57:43.911 [INF] OrdersSync Processed batch of 500 records. Total processed: 6500
+2025-02-15 02:57:44.075 [INF] OrdersSync Processed batch of 500 records. Total processed: 7000
+2025-02-15 02:57:44.301 [INF] OrdersSync Processed batch of 500 records. Total processed: 7500
+2025-02-15 02:57:44.778 [INF] OrdersSync Processed batch of 500 records. Total processed: 8000
+2025-02-15 02:57:45.303 [INF] OrdersSync Processed batch of 500 records. Total processed: 8500
+2025-02-15 02:57:45.514 [INF] OrdersSync Processed batch of 500 records. Total processed: 9000
+2025-02-15 02:57:45.691 [INF] OrdersSync Processed batch of 500 records. Total processed: 9500
+2025-02-15 02:57:45.871 [INF] OrdersSync Processed batch of 500 records. Total processed: 10000
+2025-02-15 02:57:46.269 [INF] OrdersSync Processed batch of 500 records. Total processed: 10500
+2025-02-15 02:57:46.533 [INF] OrdersSync Processed batch of 500 records. Total processed: 11000
+2025-02-15 02:57:46.778 [INF] OrdersSync Processed batch of 500 records. Total processed: 11500
+2025-02-15 02:57:47.045 [INF] OrdersSync Processed batch of 500 records. Total processed: 12000
+2025-02-15 02:57:47.417 [INF] OrdersSync Processed batch of 500 records. Total processed: 12500
+2025-02-15 02:57:47.604 [INF] OrdersSync Processed batch of 500 records. Total processed: 13000
+2025-02-15 02:57:47.868 [INF] OrdersSync Processed batch of 500 records. Total processed: 13500
+2025-02-15 02:57:48.058 [INF] OrdersSync Processed batch of 500 records. Total processed: 14000
+2025-02-15 02:57:48.223 [INF] OrdersSync Processed batch of 500 records. Total processed: 14500
+2025-02-15 02:57:48.442 [INF] OrdersSync Processed batch of 500 records. Total processed: 15000
+2025-02-15 02:57:48.603 [INF] OrdersSync Processed batch of 500 records. Total processed: 15500
+2025-02-15 02:57:48.793 [INF] OrdersSync Processed batch of 500 records. Total processed: 16000
+2025-02-15 02:57:48.942 [INF] OrdersSync Processed batch of 500 records. Total processed: 16500
+2025-02-15 02:57:49.090 [INF] OrdersSync Processed batch of 500 records. Total processed: 17000
+2025-02-15 02:57:49.254 [INF] OrdersSync Processed batch of 500 records. Total processed: 17500
+2025-02-15 02:57:49.449 [INF] OrdersSync Processed batch of 500 records. Total processed: 18000
+2025-02-15 02:57:49.615 [INF] OrdersSync Processed batch of 500 records. Total processed: 18500
+2025-02-15 02:57:49.807 [INF] OrdersSync Processed batch of 500 records. Total processed: 19000
+2025-02-15 02:57:49.982 [INF] OrdersSync Processed batch of 500 records. Total processed: 19500
+2025-02-15 02:57:50.189 [INF] OrdersSync Processed batch of 500 records. Total processed: 20000
+2025-02-15 02:57:50.388 [INF] OrdersSync Processed batch of 500 records. Total processed: 20500
+2025-02-15 02:57:50.576 [INF] OrdersSync Processed batch of 500 records. Total processed: 21000
+2025-02-15 02:57:50.774 [INF] OrdersSync Processed batch of 500 records. Total processed: 21500
+2025-02-15 02:57:50.972 [INF] OrdersSync Processed batch of 500 records. Total processed: 22000
+2025-02-15 02:57:51.184 [INF] OrdersSync Processed batch of 500 records. Total processed: 22500
+2025-02-15 02:57:51.401 [INF] OrdersSync Processed batch of 500 records. Total processed: 23000
+2025-02-15 02:57:51.563 [INF] OrdersSync Processed batch of 500 records. Total processed: 23500
+2025-02-15 02:57:51.734 [INF] OrdersSync Processed batch of 500 records. Total processed: 24000
+2025-02-15 02:57:51.915 [INF] OrdersSync Processed batch of 500 records. Total processed: 24500
+2025-02-15 02:57:52.139 [INF] OrdersSync Processed batch of 500 records. Total processed: 25000
+2025-02-15 02:57:52.353 [INF] OrdersSync Processed batch of 500 records. Total processed: 25500
+2025-02-15 02:57:52.560 [INF] OrdersSync Processed batch of 500 records. Total processed: 26000
+2025-02-15 02:57:52.840 [INF] OrdersSync Processed batch of 500 records. Total processed: 26500
+2025-02-15 02:57:53.112 [INF] OrdersSync Processed batch of 500 records. Total processed: 27000
+2025-02-15 02:57:53.361 [INF] OrdersSync Processed batch of 500 records. Total processed: 27500
+2025-02-15 02:57:53.638 [INF] OrdersSync Processed batch of 500 records. Total processed: 28000
+2025-02-15 02:57:53.898 [INF] OrdersSync Processed batch of 500 records. Total processed: 28500
+2025-02-15 02:57:54.285 [INF] OrdersSync Processed batch of 500 records. Total processed: 29000
+2025-02-15 02:57:54.513 [INF] OrdersSync Processed batch of 500 records. Total processed: 29500
+2025-02-15 02:57:54.676 [INF] OrdersSync Processed batch of 500 records. Total processed: 30000
+2025-02-15 02:57:54.911 [INF] OrdersSync Processed batch of 500 records. Total processed: 30500
+2025-02-15 02:57:55.106 [INF] OrdersSync Processed batch of 500 records. Total processed: 31000
+2025-02-15 02:57:55.428 [INF] OrdersSync Processed batch of 500 records. Total processed: 31500
+2025-02-15 02:57:55.762 [INF] OrdersSync Processed batch of 500 records. Total processed: 32000
+2025-02-15 02:57:56.072 [INF] OrdersSync Processed batch of 500 records. Total processed: 32500
+2025-02-15 02:57:56.318 [INF] OrdersSync Processed batch of 500 records. Total processed: 33000
+2025-02-15 02:57:56.514 [INF] OrdersSync Processed batch of 500 records. Total processed: 33500
+2025-02-15 02:57:56.682 [INF] OrdersSync Processed batch of 500 records. Total processed: 34000
+2025-02-15 02:57:56.900 [INF] OrdersSync Processed batch of 500 records. Total processed: 34500
+2025-02-15 02:57:57.111 [INF] OrdersSync Processed batch of 500 records. Total processed: 35000
+2025-02-15 02:57:57.384 [INF] OrdersSync Processed batch of 500 records. Total processed: 35500
+2025-02-15 02:57:57.608 [INF] OrdersSync Processed batch of 500 records. Total processed: 36000
+2025-02-15 02:57:57.782 [INF] OrdersSync Processed batch of 500 records. Total processed: 36500
+2025-02-15 02:57:57.979 [INF] OrdersSync Processed batch of 500 records. Total processed: 37000
+2025-02-15 02:57:58.167 [INF] OrdersSync Processed batch of 500 records. Total processed: 37500
+2025-02-15 02:57:58.366 [INF] OrdersSync Processed batch of 500 records. Total processed: 38000
+2025-02-15 02:57:58.592 [INF] OrdersSync Processed batch of 500 records. Total processed: 38500
+2025-02-15 02:57:58.988 [INF] OrdersSync Processed batch of 500 records. Total processed: 39000
+2025-02-15 02:57:59.378 [INF] OrdersSync Processed batch of 500 records. Total processed: 39500
+2025-02-15 02:57:59.612 [INF] OrdersSync Processed batch of 500 records. Total processed: 40000
+2025-02-15 02:57:59.864 [INF] OrdersSync Processed batch of 500 records. Total processed: 40500
+2025-02-15 02:58:00.053 [INF] OrdersSync Processed batch of 500 records. Total processed: 41000
+2025-02-15 02:58:00.241 [INF] OrdersSync Processed batch of 500 records. Total processed: 41500
+2025-02-15 02:58:00.428 [INF] OrdersSync Processed batch of 500 records. Total processed: 42000
+2025-02-15 02:58:00.700 [INF] OrdersSync Processed batch of 500 records. Total processed: 42500
+2025-02-15 02:58:00.930 [INF] OrdersSync Processed batch of 500 records. Total processed: 43000
+2025-02-15 02:58:01.126 [INF] OrdersSync Processed batch of 500 records. Total processed: 43500
+2025-02-15 02:58:01.314 [INF] OrdersSync Processed batch of 500 records. Total processed: 44000
+2025-02-15 02:58:01.473 [INF] OrdersSync Processed batch of 500 records. Total processed: 44500
+2025-02-15 02:58:01.620 [INF] OrdersSync Processed batch of 500 records. Total processed: 45000
+2025-02-15 02:58:01.779 [INF] OrdersSync Processed batch of 500 records. Total processed: 45500
+2025-02-15 02:58:01.948 [INF] OrdersSync Processed batch of 500 records. Total processed: 46000
+2025-02-15 02:58:02.108 [INF] OrdersSync Processed batch of 500 records. Total processed: 46500
+2025-02-15 02:58:02.297 [INF] OrdersSync Processed batch of 500 records. Total processed: 47000
+2025-02-15 02:58:02.476 [INF] OrdersSync Processed batch of 500 records. Total processed: 47500
+2025-02-15 02:58:02.641 [INF] OrdersSync Processed batch of 500 records. Total processed: 48000
+2025-02-15 02:58:02.801 [INF] OrdersSync Processed batch of 500 records. Total processed: 48500
+2025-02-15 02:58:02.952 [INF] OrdersSync Processed batch of 500 records. Total processed: 49000
+2025-02-15 02:58:03.154 [INF] OrdersSync Processed batch of 500 records. Total processed: 49500
+2025-02-15 02:58:03.344 [INF] OrdersSync Processed batch of 500 records. Total processed: 50000
+2025-02-15 02:58:03.513 [INF] OrdersSync Processed batch of 500 records. Total processed: 50500
+2025-02-15 02:58:03.658 [INF] OrdersSync Processed batch of 500 records. Total processed: 51000
+2025-02-15 02:58:03.824 [INF] OrdersSync Processed batch of 500 records. Total processed: 51500
+2025-02-15 02:58:04.021 [INF] OrdersSync Processed batch of 500 records. Total processed: 52000
+2025-02-15 02:58:04.233 [INF] OrdersSync Processed batch of 500 records. Total processed: 52500
+2025-02-15 02:58:04.405 [INF] OrdersSync Processed batch of 500 records. Total processed: 53000
+2025-02-15 02:58:04.565 [INF] OrdersSync Processed batch of 500 records. Total processed: 53500
+2025-02-15 02:58:04.718 [INF] OrdersSync Processed batch of 500 records. Total processed: 54000
+2025-02-15 02:58:04.903 [INF] OrdersSync Processed batch of 500 records. Total processed: 54500
+2025-02-15 02:58:05.085 [INF] OrdersSync Processed batch of 500 records. Total processed: 55000
+2025-02-15 02:58:05.284 [INF] OrdersSync Processed batch of 500 records. Total processed: 55500
+2025-02-15 02:58:05.502 [INF] OrdersSync Processed batch of 500 records. Total processed: 56000
+2025-02-15 02:58:05.752 [INF] OrdersSync Processed batch of 500 records. Total processed: 56500
+2025-02-15 02:58:05.965 [INF] OrdersSync Processed batch of 500 records. Total processed: 57000
+2025-02-15 02:58:06.171 [INF] OrdersSync Processed batch of 500 records. Total processed: 57500
+2025-02-15 02:58:06.375 [INF] OrdersSync Processed batch of 500 records. Total processed: 58000
+2025-02-15 02:58:06.524 [INF] OrdersSync Processed batch of 500 records. Total processed: 58500
+2025-02-15 02:58:06.674 [INF] OrdersSync Processed batch of 500 records. Total processed: 59000
+2025-02-15 02:58:06.830 [INF] OrdersSync Processed batch of 500 records. Total processed: 59500
+2025-02-15 02:58:07.004 [INF] OrdersSync Processed batch of 500 records. Total processed: 60000
+2025-02-15 02:58:07.197 [INF] OrdersSync Processed batch of 500 records. Total processed: 60500
+2025-02-15 02:58:07.372 [INF] OrdersSync Processed batch of 500 records. Total processed: 61000
+2025-02-15 02:58:07.528 [INF] OrdersSync Processed batch of 500 records. Total processed: 61500
+2025-02-15 02:58:07.677 [INF] OrdersSync Processed batch of 500 records. Total processed: 62000
+2025-02-15 02:58:07.901 [INF] OrdersSync Processed batch of 500 records. Total processed: 62500
+2025-02-15 02:58:08.146 [INF] OrdersSync Processed batch of 500 records. Total processed: 63000
+2025-02-15 02:58:08.362 [INF] OrdersSync Processed batch of 500 records. Total processed: 63500
+2025-02-15 02:58:08.527 [INF] OrdersSync Processed batch of 500 records. Total processed: 64000
+2025-02-15 02:58:08.773 [INF] OrdersSync Processed batch of 500 records. Total processed: 64500
+2025-02-15 02:58:08.989 [INF] OrdersSync Processed batch of 500 records. Total processed: 65000
+2025-02-15 02:58:09.141 [INF] OrdersSync Processed batch of 500 records. Total processed: 65500
+2025-02-15 02:58:09.311 [INF] OrdersSync Processed batch of 500 records. Total processed: 66000
+2025-02-15 02:58:09.485 [INF] OrdersSync Processed batch of 500 records. Total processed: 66500
+2025-02-15 02:58:09.666 [INF] OrdersSync Processed batch of 500 records. Total processed: 67000
+2025-02-15 02:58:09.851 [INF] OrdersSync Processed batch of 500 records. Total processed: 67500
+2025-02-15 02:58:10.019 [INF] OrdersSync Processed batch of 500 records. Total processed: 68000
+2025-02-15 02:58:10.270 [INF] OrdersSync Processed batch of 500 records. Total processed: 68500
+2025-02-15 02:58:10.449 [INF] OrdersSync Processed batch of 500 records. Total processed: 69000
+2025-02-15 02:58:10.632 [INF] OrdersSync Processed batch of 500 records. Total processed: 69500
+2025-02-15 02:58:10.863 [INF] OrdersSync Processed batch of 500 records. Total processed: 70000
+2025-02-15 02:58:11.105 [INF] OrdersSync Processed batch of 500 records. Total processed: 70500
+2025-02-15 02:58:11.278 [INF] OrdersSync Processed batch of 500 records. Total processed: 71000
+2025-02-15 02:58:11.517 [INF] OrdersSync Processed batch of 500 records. Total processed: 71500
+2025-02-15 02:58:11.713 [INF] OrdersSync Processed batch of 500 records. Total processed: 72000
+2025-02-15 02:58:11.882 [INF] OrdersSync Processed batch of 500 records. Total processed: 72500
+2025-02-15 02:58:12.058 [INF] OrdersSync Processed batch of 500 records. Total processed: 73000
+2025-02-15 02:58:12.217 [INF] OrdersSync Processed batch of 500 records. Total processed: 73500
+2025-02-15 02:58:12.374 [INF] OrdersSync Processed batch of 500 records. Total processed: 74000
+2025-02-15 02:58:12.539 [INF] OrdersSync Processed batch of 476 records. Total processed: 74476
+2025-02-15 02:58:12.540 [INF] OrdersSync Completed processing 74476 records. Final tracking value: 08/23/2024 00:00:00
+2025-02-15 02:58:12.540 [INF] OrdersSync Task completed successfully
+2025-02-15 02:58:12.540 [INF] OrdersSync Next run scheduled for: "2025-02-15T00:59:00.0000000Z"
+2025-02-15 02:59:00.011 [INF] OrdersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 02:59:00.052 [INF] OrdersSync No new records to process. Current tracking value: 08/23/2024 00:00:00
+2025-02-15 02:59:00.052 [INF] OrdersSync Task completed successfully
+2025-02-15 02:59:00.052 [INF] OrdersSync Next run scheduled for: "2025-02-15T01:00:00.0000000Z"
+2025-02-15 03:00:00.012 [INF] OrdersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 03:00:00.054 [INF] OrdersSync No new records to process. Current tracking value: 08/23/2024 00:00:00
+2025-02-15 03:00:00.054 [INF] OrdersSync Task completed successfully
+2025-02-15 03:00:00.054 [INF] OrdersSync Next run scheduled for: "2025-02-15T01:01:00.0000000Z"
+2025-02-15 03:01:00.012 [INF] OrdersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 03:01:00.052 [INF] OrdersSync No new records to process. Current tracking value: 08/23/2024 00:00:00
+2025-02-15 03:01:00.052 [INF] OrdersSync Task completed successfully
+2025-02-15 03:01:00.052 [INF] OrdersSync Next run scheduled for: "2025-02-15T01:02:00.0000000Z"
+2025-02-15 03:01:59.999 [INF] OrdersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 03:02:00.103 [INF] OrdersSync No new records to process. Current tracking value: 08/23/2024 00:00:00
+2025-02-15 03:02:00.103 [INF] OrdersSync Task completed successfully
+2025-02-15 03:02:00.104 [INF] OrdersSync Next run scheduled for: "2025-02-15T01:03:00.0000000Z"
+2025-02-15 03:03:00.002 [INF] OrdersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 03:03:00.050 [INF] OrdersSync No new records to process. Current tracking value: 08/23/2024 00:00:00
+2025-02-15 03:03:00.050 [INF] OrdersSync Task completed successfully
+2025-02-15 03:03:00.050 [INF] OrdersSync Next run scheduled for: "2025-02-15T01:04:00.0000000Z"
+2025-02-15 03:04:00.001 [INF] OrdersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 03:04:00.030 [INF] OrdersSync No new records to process. Current tracking value: 08/23/2024 00:00:00
+2025-02-15 03:04:00.030 [INF] OrdersSync Task completed successfully
+2025-02-15 03:04:00.030 [INF] OrdersSync Next run scheduled for: "2025-02-15T01:05:00.0000000Z"
+2025-02-15 03:05:00.010 [INF] OrdersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 03:05:00.043 [INF] OrdersSync No new records to process. Current tracking value: 08/23/2024 00:00:00
+2025-02-15 03:05:00.043 [INF] OrdersSync Task completed successfully
+2025-02-15 03:05:00.043 [INF] OrdersSync Next run scheduled for: "2025-02-15T01:06:00.0000000Z"
+2025-02-15 03:06:00.002 [INF] OrdersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 03:06:00.035 [INF] OrdersSync No new records to process. Current tracking value: 08/23/2024 00:00:00
+2025-02-15 03:06:00.035 [INF] OrdersSync Task completed successfully
+2025-02-15 03:06:00.035 [INF] OrdersSync Next run scheduled for: "2025-02-15T01:07:00.0000000Z"
+2025-02-15 03:07:00.000 [INF] OrdersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 03:07:00.048 [INF] OrdersSync No new records to process. Current tracking value: 08/23/2024 00:00:00
+2025-02-15 03:07:00.048 [INF] OrdersSync Task completed successfully
+2025-02-15 03:07:00.048 [INF] OrdersSync Next run scheduled for: "2025-02-15T01:08:00.0000000Z"
+2025-02-15 03:08:00.012 [INF] OrdersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 03:08:00.049 [INF] OrdersSync No new records to process. Current tracking value: 08/23/2024 00:00:00
+2025-02-15 03:08:00.050 [INF] OrdersSync Task completed successfully
+2025-02-15 03:08:00.050 [INF] OrdersSync Next run scheduled for: "2025-02-15T01:09:00.0000000Z"
+2025-02-15 03:08:59.999 [INF] OrdersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 03:09:00.043 [INF] OrdersSync No new records to process. Current tracking value: 08/23/2024 00:00:00
+2025-02-15 03:09:00.043 [INF] OrdersSync Task completed successfully
+2025-02-15 03:09:00.043 [INF] OrdersSync Next run scheduled for: "2025-02-15T01:10:00.0000000Z"
+2025-02-15 03:10:00.001 [INF] OrdersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 03:10:00.028 [INF] OrdersSync No new records to process. Current tracking value: 08/23/2024 00:00:00
+2025-02-15 03:10:00.028 [INF] OrdersSync Task completed successfully
+2025-02-15 03:10:00.028 [INF] OrdersSync Next run scheduled for: "2025-02-15T01:11:00.0000000Z"
+2025-02-15 03:11:00.010 [INF] OrdersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 03:11:00.042 [INF] OrdersSync No new records to process. Current tracking value: 08/23/2024 00:00:00
+2025-02-15 03:11:00.042 [INF] OrdersSync Task completed successfully
+2025-02-15 03:11:00.042 [INF] OrdersSync Next run scheduled for: "2025-02-15T01:12:00.0000000Z"
+2025-02-15 03:12:00.008 [INF] OrdersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 03:12:00.040 [INF] OrdersSync No new records to process. Current tracking value: 08/23/2024 00:00:00
+2025-02-15 03:12:00.040 [INF] OrdersSync Task completed successfully
+2025-02-15 03:12:00.040 [INF] OrdersSync Next run scheduled for: "2025-02-15T01:13:00.0000000Z"
+2025-02-15 03:13:00.005 [INF] OrdersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 03:13:00.070 [INF] OrdersSync No new records to process. Current tracking value: 08/23/2024 00:00:00
+2025-02-15 03:13:00.070 [INF] OrdersSync Task completed successfully
+2025-02-15 03:13:00.070 [INF] OrdersSync Next run scheduled for: "2025-02-15T01:14:00.0000000Z"

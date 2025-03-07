@@ -1,0 +1,30 @@
+# Git
+.git
+.gitignore
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+build/
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio files
+.vs/
+*.user
+*.userosscache
+*.sln.docstates
+
+# Logs and state
+logs/
+state/
+
+# Environment files
+.env
+*.env
+
+# Docker files
+Dockerfile
+docker-compose*
+.dockerignore

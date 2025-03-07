@@ -1,0 +1,244 @@
+2025-02-15 02:38:50.986 [INF] CustomersSync Starting task execution. Last tracking value: 08/21/2024 10:21:55
+2025-02-15 02:38:52.989 [INF] CustomersSync Processed final 1 records
+2025-02-15 02:38:52.997 [INF] CustomersSync Task completed successfully
+2025-02-15 02:38:52.999 [INF] CustomersSync Next run scheduled for: "2025-02-15T00:39:00.0000000Z"
+2025-02-15 02:39:00.002 [INF] CustomersSync Starting task execution. Last tracking value: 08/21/2024 10:21:55
+2025-02-15 02:39:00.024 [INF] CustomersSync Processed final 1 records
+2025-02-15 02:39:00.025 [INF] CustomersSync Task completed successfully
+2025-02-15 02:39:00.025 [INF] CustomersSync Next run scheduled for: "2025-02-15T00:40:00.0000000Z"
+2025-02-15 02:40:00.012 [INF] CustomersSync Starting task execution. Last tracking value: 08/21/2024 10:21:55
+2025-02-15 02:40:00.049 [INF] CustomersSync Processed final 1 records
+2025-02-15 02:40:00.050 [INF] CustomersSync Task completed successfully
+2025-02-15 02:40:00.051 [INF] CustomersSync Next run scheduled for: "2025-02-15T00:41:00.0000000Z"
+2025-02-15 02:41:00.009 [INF] CustomersSync Starting task execution. Last tracking value: 08/21/2024 10:21:55
+2025-02-15 02:41:00.042 [INF] CustomersSync Processed final 1 records
+2025-02-15 02:41:00.045 [INF] CustomersSync Task completed successfully
+2025-02-15 02:41:00.045 [INF] CustomersSync Next run scheduled for: "2025-02-15T00:42:00.0000000Z"
+2025-02-15 02:42:00.007 [INF] CustomersSync Starting task execution. Last tracking value: 08/21/2024 10:21:55
+2025-02-15 02:42:00.029 [INF] CustomersSync Processed final 1 records
+2025-02-15 02:42:00.030 [INF] CustomersSync Task completed successfully
+2025-02-15 02:42:00.030 [INF] CustomersSync Next run scheduled for: "2025-02-15T00:43:00.0000000Z"
+2025-02-15 02:43:00.003 [INF] CustomersSync Starting task execution. Last tracking value: 08/21/2024 10:21:55
+2025-02-15 02:43:00.022 [INF] CustomersSync Processed final 1 records
+2025-02-15 02:43:00.023 [INF] CustomersSync Task completed successfully
+2025-02-15 02:43:00.023 [INF] CustomersSync Next run scheduled for: "2025-02-15T00:44:00.0000000Z"
+2025-02-15 02:44:00.005 [INF] CustomersSync Starting task execution. Last tracking value: 08/21/2024 10:21:55
+2025-02-15 02:44:00.035 [INF] CustomersSync Processed final 1 records
+2025-02-15 02:44:00.036 [INF] CustomersSync Task completed successfully
+2025-02-15 02:44:00.036 [INF] CustomersSync Next run scheduled for: "2025-02-15T00:45:00.0000000Z"
+2025-02-15 02:44:46.608 [INF] CustomersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 02:44:48.272 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:44:48.371 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:44:48.493 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:44:48.682 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:44:48.800 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:44:48.915 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:44:49.006 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:44:49.099 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:44:49.197 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:44:49.312 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:44:49.415 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:44:49.512 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:44:49.610 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:44:49.710 [INF] CustomersSync Processed final 951 records
+2025-02-15 02:44:49.711 [INF] CustomersSync Task completed successfully
+2025-02-15 02:44:49.711 [INF] CustomersSync Next run scheduled for: "2025-02-15T00:45:00.0000000Z"
+2025-02-15 02:45:00.011 [INF] CustomersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 02:45:00.034 [INF] CustomersSync Processed final 1 records
+2025-02-15 02:45:00.035 [INF] CustomersSync Task completed successfully
+2025-02-15 02:45:00.035 [INF] CustomersSync Next run scheduled for: "2025-02-15T00:46:00.0000000Z"
+2025-02-15 02:45:49.810 [INF] CustomersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 02:46:38.435 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:46:38.532 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:46:38.617 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:46:38.713 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:46:38.817 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:46:38.925 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:46:39.049 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:46:39.148 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:46:39.263 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:46:39.371 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:46:39.500 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:46:39.606 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:46:39.702 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:46:39.815 [INF] CustomersSync Processed final 951 records
+2025-02-15 02:46:39.816 [INF] CustomersSync Task completed successfully
+2025-02-15 02:46:39.816 [INF] CustomersSync Next run scheduled for: "2025-02-15T00:47:00.0000000Z"
+2025-02-15 02:47:00.014 [INF] CustomersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 02:47:31.834 [INF] CustomersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 02:47:39.853 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:47:39.967 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:47:40.118 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:47:40.225 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:47:40.350 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:47:40.479 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:47:40.631 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:47:40.759 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:47:40.908 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:47:41.058 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:47:41.268 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:47:41.385 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:47:41.524 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:47:41.634 [INF] CustomersSync Processed final 951 records
+2025-02-15 02:47:41.643 [INF] CustomersSync Task completed successfully
+2025-02-15 02:47:41.645 [INF] CustomersSync Next run scheduled for: "2025-02-15T00:48:00.0000000Z"
+2025-02-15 02:48:00.037 [INF] CustomersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 02:48:08.705 [INF] CustomersSync Processed final 1 records
+2025-02-15 02:48:08.706 [INF] CustomersSync Task completed successfully
+2025-02-15 02:48:08.706 [INF] CustomersSync Next run scheduled for: "2025-02-15T00:49:00.0000000Z"
+2025-02-15 02:49:00.010 [INF] CustomersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 02:49:01.339 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:49:01.418 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:49:01.521 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:49:01.622 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:49:01.703 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:49:01.788 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:49:01.867 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:49:01.971 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:49:02.055 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:49:02.139 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:49:02.250 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:49:02.337 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:49:02.455 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:49:02.533 [INF] CustomersSync Processed final 951 records
+2025-02-15 02:49:02.534 [INF] CustomersSync Task completed successfully
+2025-02-15 02:49:02.534 [INF] CustomersSync Next run scheduled for: "2025-02-15T00:50:00.0000000Z"
+2025-02-15 02:50:00.006 [INF] CustomersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 02:50:00.038 [INF] CustomersSync Processed final 1 records
+2025-02-15 02:50:00.039 [INF] CustomersSync Task completed successfully
+2025-02-15 02:50:00.039 [INF] CustomersSync Next run scheduled for: "2025-02-15T00:51:00.0000000Z"
+2025-02-15 02:50:59.998 [INF] CustomersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 02:51:01.354 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:51:01.469 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:51:01.605 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:51:01.693 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:51:01.786 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:51:01.874 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:51:01.955 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:51:02.040 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:51:02.122 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:51:02.224 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:51:02.298 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:51:02.385 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:51:02.471 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:51:02.542 [INF] CustomersSync Processed final 951 records
+2025-02-15 02:51:02.542 [INF] CustomersSync Task completed successfully
+2025-02-15 02:51:02.543 [INF] CustomersSync Next run scheduled for: "2025-02-15T00:52:00.0000000Z"
+2025-02-15 02:52:00.011 [INF] CustomersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 02:52:00.046 [INF] CustomersSync Processed final 1 records
+2025-02-15 02:52:00.048 [INF] CustomersSync Task completed successfully
+2025-02-15 02:52:00.048 [INF] CustomersSync Next run scheduled for: "2025-02-15T00:53:00.0000000Z"
+2025-02-15 02:53:00.008 [INF] CustomersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 02:53:00.054 [INF] CustomersSync Processed final 1 records
+2025-02-15 02:53:00.055 [INF] CustomersSync Task completed successfully
+2025-02-15 02:53:00.055 [INF] CustomersSync Next run scheduled for: "2025-02-15T00:54:00.0000000Z"
+2025-02-15 02:54:00.006 [INF] CustomersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 02:54:00.023 [INF] CustomersSync Processed final 1 records
+2025-02-15 02:54:00.024 [INF] CustomersSync Task completed successfully
+2025-02-15 02:54:00.024 [INF] CustomersSync Next run scheduled for: "2025-02-15T00:55:00.0000000Z"
+2025-02-15 02:55:00.006 [INF] CustomersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 02:55:00.035 [INF] CustomersSync Processed final 1 records
+2025-02-15 02:55:00.038 [INF] CustomersSync Task completed successfully
+2025-02-15 02:55:00.038 [INF] CustomersSync Next run scheduled for: "2025-02-15T00:56:00.0000000Z"
+2025-02-15 02:56:00.012 [INF] CustomersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 02:56:00.033 [INF] CustomersSync Processed final 1 records
+2025-02-15 02:56:00.034 [INF] CustomersSync Task completed successfully
+2025-02-15 02:56:00.034 [INF] CustomersSync Next run scheduled for: "2025-02-15T00:57:00.0000000Z"
+2025-02-15 02:57:30.428 [INF] CustomersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 02:57:34.291 [INF] CustomersSync Processed batch of 1000 records. Total processed: 1000
+2025-02-15 02:57:34.466 [INF] CustomersSync Processed batch of 1000 records. Total processed: 2000
+2025-02-15 02:57:34.672 [INF] CustomersSync Processed batch of 1000 records. Total processed: 3000
+2025-02-15 02:57:34.868 [INF] CustomersSync Processed batch of 1000 records. Total processed: 4000
+2025-02-15 02:57:35.062 [INF] CustomersSync Processed batch of 1000 records. Total processed: 5000
+2025-02-15 02:57:35.223 [INF] CustomersSync Processed batch of 1000 records. Total processed: 6000
+2025-02-15 02:57:35.444 [INF] CustomersSync Processed batch of 1000 records. Total processed: 7000
+2025-02-15 02:57:35.577 [INF] CustomersSync Processed batch of 1000 records. Total processed: 8000
+2025-02-15 02:57:35.677 [INF] CustomersSync Processed batch of 1000 records. Total processed: 9000
+2025-02-15 02:57:35.911 [INF] CustomersSync Processed batch of 1000 records. Total processed: 10000
+2025-02-15 02:57:36.184 [INF] CustomersSync Processed batch of 1000 records. Total processed: 11000
+2025-02-15 02:57:36.484 [INF] CustomersSync Processed batch of 1000 records. Total processed: 12000
+2025-02-15 02:57:36.684 [INF] CustomersSync Processed batch of 1000 records. Total processed: 13000
+2025-02-15 02:57:36.873 [INF] CustomersSync Processed batch of 951 records. Total processed: 13951
+2025-02-15 02:57:36.895 [INF] CustomersSync Completed processing 13951 records. Final tracking value: 08/21/2024 10:21:55
+2025-02-15 02:57:36.904 [INF] CustomersSync Task completed successfully
+2025-02-15 02:57:36.907 [INF] CustomersSync Next run scheduled for: "2025-02-15T00:58:00.0000000Z"
+2025-02-15 02:58:00.035 [INF] CustomersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 02:58:00.060 [INF] CustomersSync Processed batch of 1 records. Total processed: 13952
+2025-02-15 02:58:00.061 [INF] CustomersSync Completed processing 1 records. Final tracking value: 08/21/2024 10:21:55
+2025-02-15 02:58:00.061 [INF] CustomersSync Task completed successfully
+2025-02-15 02:58:00.062 [INF] CustomersSync Next run scheduled for: "2025-02-15T00:59:00.0000000Z"
+2025-02-15 02:59:00.010 [INF] CustomersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 02:59:00.045 [INF] CustomersSync Processed batch of 1 records. Total processed: 13953
+2025-02-15 02:59:00.046 [INF] CustomersSync Completed processing 1 records. Final tracking value: 08/21/2024 10:21:55
+2025-02-15 02:59:00.047 [INF] CustomersSync Task completed successfully
+2025-02-15 02:59:00.047 [INF] CustomersSync Next run scheduled for: "2025-02-15T01:00:00.0000000Z"
+2025-02-15 03:00:00.012 [INF] CustomersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 03:00:00.038 [INF] CustomersSync Processed batch of 1 records. Total processed: 13954
+2025-02-15 03:00:00.040 [INF] CustomersSync Completed processing 1 records. Final tracking value: 08/21/2024 10:21:55
+2025-02-15 03:00:00.040 [INF] CustomersSync Task completed successfully
+2025-02-15 03:00:00.041 [INF] CustomersSync Next run scheduled for: "2025-02-15T01:01:00.0000000Z"
+2025-02-15 03:01:00.012 [INF] CustomersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 03:01:00.042 [INF] CustomersSync Processed batch of 1 records. Total processed: 13955
+2025-02-15 03:01:00.044 [INF] CustomersSync Completed processing 1 records. Final tracking value: 08/21/2024 10:21:55
+2025-02-15 03:01:00.044 [INF] CustomersSync Task completed successfully
+2025-02-15 03:01:00.044 [INF] CustomersSync Next run scheduled for: "2025-02-15T01:02:00.0000000Z"
+2025-02-15 03:02:00.001 [INF] CustomersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 03:02:00.047 [INF] CustomersSync Processed batch of 1 records. Total processed: 13956
+2025-02-15 03:02:00.049 [INF] CustomersSync Completed processing 1 records. Final tracking value: 08/21/2024 10:21:55
+2025-02-15 03:02:00.051 [INF] CustomersSync Task completed successfully
+2025-02-15 03:02:00.051 [INF] CustomersSync Next run scheduled for: "2025-02-15T01:03:00.0000000Z"
+2025-02-15 03:03:00.002 [INF] CustomersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 03:03:00.034 [INF] CustomersSync Processed batch of 1 records. Total processed: 13957
+2025-02-15 03:03:00.036 [INF] CustomersSync Completed processing 1 records. Final tracking value: 08/21/2024 10:21:55
+2025-02-15 03:03:00.036 [INF] CustomersSync Task completed successfully
+2025-02-15 03:03:00.036 [INF] CustomersSync Next run scheduled for: "2025-02-15T01:04:00.0000000Z"
+2025-02-15 03:03:59.999 [INF] CustomersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 03:04:00.012 [INF] CustomersSync Processed batch of 1 records. Total processed: 13958
+2025-02-15 03:04:00.014 [INF] CustomersSync Completed processing 1 records. Final tracking value: 08/21/2024 10:21:55
+2025-02-15 03:04:00.016 [INF] CustomersSync Task completed successfully
+2025-02-15 03:04:00.017 [INF] CustomersSync Next run scheduled for: "2025-02-15T01:05:00.0000000Z"
+2025-02-15 03:05:00.010 [INF] CustomersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 03:05:00.053 [INF] CustomersSync Processed batch of 1 records. Total processed: 13959
+2025-02-15 03:05:00.054 [INF] CustomersSync Completed processing 1 records. Final tracking value: 08/21/2024 10:21:55
+2025-02-15 03:05:00.054 [INF] CustomersSync Task completed successfully
+2025-02-15 03:05:00.054 [INF] CustomersSync Next run scheduled for: "2025-02-15T01:06:00.0000000Z"
+2025-02-15 03:06:00.002 [INF] CustomersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 03:06:00.028 [INF] CustomersSync Processed batch of 1 records. Total processed: 13960
+2025-02-15 03:06:00.029 [INF] CustomersSync Completed processing 1 records. Final tracking value: 08/21/2024 10:21:55
+2025-02-15 03:06:00.030 [INF] CustomersSync Task completed successfully
+2025-02-15 03:06:00.030 [INF] CustomersSync Next run scheduled for: "2025-02-15T01:07:00.0000000Z"
+2025-02-15 03:07:00.000 [INF] CustomersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 03:07:00.028 [INF] CustomersSync Processed batch of 1 records. Total processed: 13961
+2025-02-15 03:07:00.029 [INF] CustomersSync Completed processing 1 records. Final tracking value: 08/21/2024 10:21:55
+2025-02-15 03:07:00.030 [INF] CustomersSync Task completed successfully
+2025-02-15 03:07:00.031 [INF] CustomersSync Next run scheduled for: "2025-02-15T01:08:00.0000000Z"
+2025-02-15 03:08:00.012 [INF] CustomersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 03:08:00.039 [INF] CustomersSync Processed batch of 1 records. Total processed: 13962
+2025-02-15 03:08:00.040 [INF] CustomersSync Completed processing 1 records. Final tracking value: 08/21/2024 10:21:55
+2025-02-15 03:08:00.040 [INF] CustomersSync Task completed successfully
+2025-02-15 03:08:00.040 [INF] CustomersSync Next run scheduled for: "2025-02-15T01:09:00.0000000Z"
+2025-02-15 03:08:59.999 [INF] CustomersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 03:09:00.034 [INF] CustomersSync Processed batch of 1 records. Total processed: 13963
+2025-02-15 03:09:00.035 [INF] CustomersSync Completed processing 1 records. Final tracking value: 08/21/2024 10:21:55
+2025-02-15 03:09:00.036 [INF] CustomersSync Task completed successfully
+2025-02-15 03:09:00.036 [INF] CustomersSync Next run scheduled for: "2025-02-15T01:10:00.0000000Z"
+2025-02-15 03:10:00.001 [INF] CustomersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 03:10:00.032 [INF] CustomersSync Processed batch of 1 records. Total processed: 13964
+2025-02-15 03:10:00.042 [INF] CustomersSync Completed processing 1 records. Final tracking value: 08/21/2024 10:21:55
+2025-02-15 03:10:00.042 [INF] CustomersSync Task completed successfully
+2025-02-15 03:10:00.042 [INF] CustomersSync Next run scheduled for: "2025-02-15T01:11:00.0000000Z"
+2025-02-15 03:11:00.009 [INF] CustomersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 03:11:00.030 [INF] CustomersSync Processed batch of 1 records. Total processed: 13965
+2025-02-15 03:11:00.031 [INF] CustomersSync Completed processing 1 records. Final tracking value: 08/21/2024 10:21:55
+2025-02-15 03:11:00.031 [INF] CustomersSync Task completed successfully
+2025-02-15 03:11:00.031 [INF] CustomersSync Next run scheduled for: "2025-02-15T01:12:00.0000000Z"
+2025-02-15 03:12:00.008 [INF] CustomersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 03:12:00.027 [INF] CustomersSync Processed batch of 1 records. Total processed: 13966
+2025-02-15 03:12:00.028 [INF] CustomersSync Completed processing 1 records. Final tracking value: 08/21/2024 10:21:55
+2025-02-15 03:12:00.028 [INF] CustomersSync Task completed successfully
+2025-02-15 03:12:00.028 [INF] CustomersSync Next run scheduled for: "2025-02-15T01:13:00.0000000Z"
+2025-02-15 03:13:00.005 [INF] CustomersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 03:13:00.044 [INF] CustomersSync Processed batch of 1 records. Total processed: 13967
+2025-02-15 03:13:00.049 [INF] CustomersSync Completed processing 1 records. Final tracking value: 08/21/2024 10:21:55
+2025-02-15 03:13:00.050 [INF] CustomersSync Task completed successfully
+2025-02-15 03:13:00.050 [INF] CustomersSync Next run scheduled for: "2025-02-15T01:14:00.0000000Z"

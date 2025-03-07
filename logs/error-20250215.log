@@ -1,0 +1,20 @@
+2025-02-15 01:51:16.574 [ERR] EtlDotnet.Worker Error updating service status
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'D:\var\log\etldotnet\service-status.json'.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.OpenHandle(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.File.WriteToFile(String path, FileMode mode, String contents, Encoding encoding)
+   at EtlDotnet.Worker.UpdateServiceStatus(Object state) in D:\os\EtlDotnet\Worker.cs:line 290
+2025-02-15 02:09:19.705 [ERR] EtlDotnet.Worker Error saving state for task CustomersSync
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'D:\os\EtlDotnet\state\customers-sync.json'.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.OpenHandle(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.File.WriteToFile(String path, FileMode mode, String contents, Encoding encoding)
+   at EtlDotnet.Worker.SaveTaskState(TaskConfig task, String lastValue)
+2025-02-15 02:34:32.297 [ERR] EtlDotnet.Worker Error updating service status
+System.IO.IOException: The process cannot access the file 'D:\var\log\etldotnet\service-status.json' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.WriteToFile(String path, FileMode mode, String contents, Encoding encoding)
+   at EtlDotnet.Worker.UpdateServiceStatus(Object state) in D:\os\EtlDotnet\Worker.cs:line 302

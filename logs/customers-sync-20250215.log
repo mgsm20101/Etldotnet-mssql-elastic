@@ -1,0 +1,187 @@
+2025-02-15 01:51:13.775 [INF] CustomersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 01:51:55.106 [ERR] CustomersSync Error occurred while processing task
+System.Globalization.CultureNotFoundException: Only the invariant culture is supported in globalization-invariant mode. See https://aka.ms/GlobalizationInvariantMode for more information. (Parameter 'name')
+en-us is an invalid culture identifier.
+   at System.Globalization.CultureInfo.GetCultureInfo(String name)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.InternalOpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at EtlDotnet.Worker.ProcessTaskDataAsync(TaskConfig taskConfig, Logger taskLogger, TaskStatus taskStatus, CancellationToken stoppingToken) in D:\os\EtlDotnet\Worker.cs:line 182
+   at EtlDotnet.Worker.RunTaskAsync(TaskConfig taskConfig, CancellationToken stoppingToken) in D:\os\EtlDotnet\Worker.cs:line 145
+2025-02-15 01:52:56.528 [INF] CustomersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 01:52:56.568 [ERR] CustomersSync Error occurred while processing task
+System.Globalization.CultureNotFoundException: Only the invariant culture is supported in globalization-invariant mode. See https://aka.ms/GlobalizationInvariantMode for more information. (Parameter 'name')
+en-us is an invalid culture identifier.
+   at System.Globalization.CultureInfo.GetCultureInfo(String name)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.InternalOpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at EtlDotnet.Worker.ProcessTaskDataAsync(TaskConfig taskConfig, Logger taskLogger, TaskStatus taskStatus, CancellationToken stoppingToken) in D:\os\EtlDotnet\Worker.cs:line 182
+   at EtlDotnet.Worker.RunTaskAsync(TaskConfig taskConfig, CancellationToken stoppingToken) in D:\os\EtlDotnet\Worker.cs:line 145
+2025-02-15 01:56:49.947 [INF] CustomersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 01:57:12.066 [ERR] CustomersSync Error occurred while processing task
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+ ---> System.ComponentModel.Win32Exception (53): The network path was not found.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at EtlDotnet.Worker.ProcessTaskDataAsync(TaskConfig taskConfig, Logger taskLogger, TaskStatus taskStatus, CancellationToken stoppingToken) in D:\os\EtlDotnet\Worker.cs:line 183
+   at EtlDotnet.Worker.RunTaskAsync(TaskConfig taskConfig, CancellationToken stoppingToken) in D:\os\EtlDotnet\Worker.cs:line 146
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+2025-02-15 01:57:40.478 [INF] CustomersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 01:57:49.224 [ERR] CustomersSync Error occurred while processing task
+System.IndexOutOfRangeException: LastModified
+   at Microsoft.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at Microsoft.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at Microsoft.Data.SqlClient.SqlDataReader.get_Item(String name)
+   at EtlDotnet.Worker.ProcessTaskDataAsync(TaskConfig taskConfig, Logger taskLogger, TaskStatus taskStatus, CancellationToken stoppingToken) in D:\os\EtlDotnet\Worker.cs:line 212
+   at EtlDotnet.Worker.RunTaskAsync(TaskConfig taskConfig, CancellationToken stoppingToken) in D:\os\EtlDotnet\Worker.cs:line 146
+2025-02-15 01:58:49.272 [INF] CustomersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 01:59:26.298 [ERR] CustomersSync Error occurred while processing task
+System.IndexOutOfRangeException: LastModified
+   at Microsoft.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at Microsoft.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at Microsoft.Data.SqlClient.SqlDataReader.get_Item(String name)
+   at EtlDotnet.Worker.ProcessTaskDataAsync(TaskConfig taskConfig, Logger taskLogger, TaskStatus taskStatus, CancellationToken stoppingToken) in D:\os\EtlDotnet\Worker.cs:line 212
+   at EtlDotnet.Worker.RunTaskAsync(TaskConfig taskConfig, CancellationToken stoppingToken) in D:\os\EtlDotnet\Worker.cs:line 146
+2025-02-15 02:00:26.316 [INF] CustomersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 02:01:18.827 [ERR] CustomersSync Error occurred while processing task
+System.IndexOutOfRangeException: LastModified
+   at Microsoft.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at Microsoft.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at Microsoft.Data.SqlClient.SqlDataReader.get_Item(String name)
+   at EtlDotnet.Worker.ProcessTaskDataAsync(TaskConfig taskConfig, Logger taskLogger, TaskStatus taskStatus, CancellationToken stoppingToken) in D:\os\EtlDotnet\Worker.cs:line 212
+   at EtlDotnet.Worker.RunTaskAsync(TaskConfig taskConfig, CancellationToken stoppingToken) in D:\os\EtlDotnet\Worker.cs:line 146
+2025-02-15 02:02:18.843 [INF] CustomersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 02:02:24.760 [ERR] CustomersSync Error occurred while processing task
+System.IndexOutOfRangeException: LastModified
+   at Microsoft.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at Microsoft.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at Microsoft.Data.SqlClient.SqlDataReader.get_Item(String name)
+   at EtlDotnet.Worker.ProcessTaskDataAsync(TaskConfig taskConfig, Logger taskLogger, TaskStatus taskStatus, CancellationToken stoppingToken) in D:\os\EtlDotnet\Worker.cs:line 212
+   at EtlDotnet.Worker.RunTaskAsync(TaskConfig taskConfig, CancellationToken stoppingToken) in D:\os\EtlDotnet\Worker.cs:line 146
+2025-02-15 02:03:24.762 [INF] CustomersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 02:03:42.341 [ERR] CustomersSync Error occurred while processing task
+System.IndexOutOfRangeException: LastModified
+   at Microsoft.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at Microsoft.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at Microsoft.Data.SqlClient.SqlDataReader.get_Item(String name)
+   at EtlDotnet.Worker.ProcessTaskDataAsync(TaskConfig taskConfig, Logger taskLogger, TaskStatus taskStatus, CancellationToken stoppingToken) in D:\os\EtlDotnet\Worker.cs:line 212
+   at EtlDotnet.Worker.RunTaskAsync(TaskConfig taskConfig, CancellationToken stoppingToken) in D:\os\EtlDotnet\Worker.cs:line 146
+2025-02-15 02:04:42.350 [INF] CustomersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 02:05:40.370 [INF] CustomersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 02:05:48.106 [ERR] CustomersSync Error occurred while processing task
+System.IndexOutOfRangeException: fDate
+   at Microsoft.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at Microsoft.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at Microsoft.Data.SqlClient.SqlDataReader.get_Item(String name)
+   at EtlDotnet.Worker.ProcessTaskDataAsync(TaskConfig taskConfig, Logger taskLogger, TaskStatus taskStatus, CancellationToken stoppingToken) in D:\os\EtlDotnet\Worker.cs:line 212
+   at EtlDotnet.Worker.RunTaskAsync(TaskConfig taskConfig, CancellationToken stoppingToken) in D:\os\EtlDotnet\Worker.cs:line 146
+2025-02-15 02:06:48.144 [INF] CustomersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 02:07:07.313 [INF] CustomersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 02:07:38.082 [INF] CustomersSync Read 13951 records from database
+2025-02-15 02:09:20.986 [INF] CustomersSync Successfully processed 13951 records. New tracking value: 08/21/2024 10:21:55
+2025-02-15 02:09:20.993 [INF] CustomersSync Task completed successfully
+2025-02-15 02:09:20.996 [INF] CustomersSync Next run scheduled for: "2025-02-15T00:10:00.0000000Z"
+2025-02-15 02:10:00.004 [INF] CustomersSync Starting task execution. Last tracking value: 08/21/2024 10:21:55
+2025-02-15 02:12:14.901 [INF] CustomersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 02:12:18.146 [INF] CustomersSync Read 13951 records from database
+2025-02-15 02:12:25.502 [INF] CustomersSync Successfully processed 13951 records. New tracking value: 08/21/2024 10:21:55
+2025-02-15 02:12:25.508 [INF] CustomersSync Task completed successfully
+2025-02-15 02:12:25.510 [INF] CustomersSync Next run scheduled for: "2025-02-15T00:13:00.0000000Z"
+2025-02-15 02:13:00.015 [INF] CustomersSync Starting task execution. Last tracking value: 08/21/2024 10:21:55
+2025-02-15 02:13:02.868 [INF] CustomersSync Read 1 records from database
+2025-02-15 02:13:43.541 [INF] CustomersSync Successfully processed 1 records. New tracking value: 08/21/2024 10:21:55
+2025-02-15 02:26:08.200 [INF] CustomersSync Starting task execution. Last tracking value: 08/21/2024 10:21:55
+2025-02-15 02:26:28.587 [INF] CustomersSync Processed final 1 records
+2025-02-15 02:26:28.597 [INF] CustomersSync Task completed successfully
+2025-02-15 02:26:28.599 [INF] CustomersSync Next run scheduled for: "2025-02-15T00:27:00.0000000Z"
+2025-02-15 02:27:00.003 [INF] CustomersSync Starting task execution. Last tracking value: 08/21/2024 10:21:55
+2025-02-15 02:27:09.432 [INF] CustomersSync Processed final 1 records
+2025-02-15 02:27:09.434 [INF] CustomersSync Task completed successfully
+2025-02-15 02:27:09.434 [INF] CustomersSync Next run scheduled for: "2025-02-15T00:28:00.0000000Z"
+2025-02-15 02:28:00.014 [INF] CustomersSync Starting task execution. Last tracking value: 08/21/2024 10:21:55
+2025-02-15 02:28:43.595 [INF] CustomersSync Starting task execution. Last tracking value: 08/21/2024 10:21:55
+2025-02-15 02:28:46.513 [INF] CustomersSync Processed final 1 records
+2025-02-15 02:28:46.523 [INF] CustomersSync Task completed successfully
+2025-02-15 02:28:46.525 [INF] CustomersSync Next run scheduled for: "2025-02-15T00:29:00.0000000Z"
+2025-02-15 02:29:00.009 [INF] CustomersSync Starting task execution. Last tracking value: 08/21/2024 10:21:55
+2025-02-15 02:30:13.195 [INF] CustomersSync Processed final 1 records
+2025-02-15 02:30:13.200 [INF] CustomersSync Task completed successfully
+2025-02-15 02:30:13.200 [INF] CustomersSync Next run scheduled for: "2025-02-15T00:31:00.0000000Z"
+2025-02-15 02:31:00.005 [INF] CustomersSync Starting task execution. Last tracking value: 08/21/2024 10:21:55
+2025-02-15 02:32:06.921 [INF] CustomersSync Starting task execution. Last tracking value: 08/21/2024 10:21:55
+2025-02-15 02:32:09.751 [INF] CustomersSync Processed final 1 records
+2025-02-15 02:32:09.772 [INF] CustomersSync Task completed successfully
+2025-02-15 02:32:09.776 [INF] CustomersSync Next run scheduled for: "2025-02-15T00:33:00.0000000Z"
+2025-02-15 02:34:30.692 [INF] CustomersSync Starting task execution. Last tracking value: 08/21/2024 10:21:55
+2025-02-15 02:34:32.297 [INF] CustomersSync Processed final 1 records
+2025-02-15 02:34:32.298 [INF] CustomersSync Task completed successfully
+2025-02-15 02:34:32.298 [INF] CustomersSync Next run scheduled for: "2025-02-15T00:35:00.0000000Z"
+2025-02-15 02:35:00.011 [INF] CustomersSync Starting task execution. Last tracking value: 08/21/2024 10:21:55
+2025-02-15 02:35:03.653 [INF] CustomersSync Processed final 1 records
+2025-02-15 02:35:03.653 [INF] CustomersSync Task completed successfully
+2025-02-15 02:35:03.653 [INF] CustomersSync Next run scheduled for: "2025-02-15T00:36:00.0000000Z"
+2025-02-15 02:35:31.147 [INF] CustomersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 02:35:33.611 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:35:33.712 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:35:33.857 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:35:34.043 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:35:34.222 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:35:34.352 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:35:34.458 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:35:34.557 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:35:34.711 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:35:34.919 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:35:35.064 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:35:35.200 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:35:35.355 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:35:47.184 [INF] CustomersSync Processed final 951 records
+2025-02-15 02:35:47.192 [INF] CustomersSync Task completed successfully
+2025-02-15 02:35:47.194 [INF] CustomersSync Next run scheduled for: "2025-02-15T00:36:00.0000000Z"
+2025-02-15 02:36:00.072 [INF] CustomersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 02:36:00.175 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:36:00.274 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:36:00.377 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:36:00.459 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:36:00.557 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:36:00.656 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:36:00.742 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:36:00.821 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:36:00.911 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:36:00.988 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:36:01.077 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:36:01.177 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:36:01.279 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:36:01.372 [INF] CustomersSync Processed final 951 records
+2025-02-15 02:36:01.373 [INF] CustomersSync Task completed successfully
+2025-02-15 02:36:01.373 [INF] CustomersSync Next run scheduled for: "2025-02-15T00:37:00.0000000Z"
+2025-02-15 02:37:00.011 [INF] CustomersSync Starting task execution. Last tracking value: 2000-01-01 00:00:00
+2025-02-15 02:37:00.126 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:37:00.217 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:37:00.321 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:37:00.421 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:37:00.506 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:37:00.586 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:37:00.696 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:37:00.778 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:37:00.864 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:37:00.938 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:37:01.014 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:37:01.103 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:37:01.188 [INF] CustomersSync Processed 1000 records
+2025-02-15 02:37:01.262 [INF] CustomersSync Processed final 951 records
+2025-02-15 02:37:01.262 [INF] CustomersSync Task completed successfully
+2025-02-15 02:37:01.262 [INF] CustomersSync Next run scheduled for: "2025-02-15T00:38:00.0000000Z"

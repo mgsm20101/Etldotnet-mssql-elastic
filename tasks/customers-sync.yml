@@ -1,0 +1,30 @@
+taskName: CustomersSync
+sqlConnectionString: "Server=.;Database=testDb;User Id=sa;Password=Passw0rd;TrustServerCertificate=True"
+query: |
+  SELECT [fID]
+  ,[fName]
+  ,[fNameA]
+  ,[fAddress]
+  ,[fTelephone]
+  ,[fBirthDate]
+  ,[fBagNo]
+  ,[fEmpCode]
+  ,[fMemberNo]
+  ,[UIG_ID]
+  ,[CustomerType]
+  ,[LastVisitDate]
+  ,[Gifts]
+  FROM [dbo].[tblCustomers]
+  where LastVisitDate >@LastRunTime
+
+elasticsearchUrl: "http://localhost:9200"
+indexName: customers
+trackingColumnName: LastVisitDate
+defaultTrackingValue: "2000-01-01 00:00:00"
+trackingValueType: DateTime
+idColumnName: fID
+cronExpression: "* * * * *"
+batchSize: 1000
+isEnabled: true
+logFile: "logs/customers/customers-sync-.log"
+stateFile: "state/customers-sync.json"

@@ -1,0 +1,28 @@
+{
+  "IsHealthy": true,
+  "LastUpdateTime": "2025-02-15T01:12:29.7809911Z",
+  "Tasks": [
+    {
+      "TaskName": "OrdersSync",
+      "IsRunning": true,
+      "LastRunTime": "2025-02-15T01:12:00.0088253Z",
+      "LastSuccessTime": "2025-02-15T01:12:00.040298Z",
+      "SuccessCount": 15,
+      "ErrorCount": 0,
+      "LastError": null,
+      "ProcessedRecords": 74476,
+      "LastProcessedValue": "2000-01-01 00:00:00"
+    },
+    {
+      "TaskName": "CustomersSync",
+      "IsRunning": true,
+      "LastRunTime": "2025-02-15T01:12:00.0088322Z",
+      "LastSuccessTime": "2025-02-15T01:12:00.0287322Z",
+      "SuccessCount": 16,
+      "ErrorCount": 0,
+      "LastError": null,
+      "ProcessedRecords": 13966,
+      "LastProcessedValue": "2000-01-01 00:00:00"
+    }
+  ]
+}

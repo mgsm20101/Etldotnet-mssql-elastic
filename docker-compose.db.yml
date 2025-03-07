@@ -1,0 +1,90 @@
+version: '3.8'
+
+services:
+  # خدمة SQL Server لتخزين بيانات المصدر
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sqlserver
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Passw0rd
+      - MSSQL_PID=Express
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlserver-data:/var/opt/mssql
+      - ./database-setup.sql:/docker-entrypoint-initdb.d/database-setup.sql:ro
+    networks:
+      - etl-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P Passw0rd -Q 'SELECT 1' || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # خدمة Elasticsearch لتخزين البيانات المستخرجة
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.17.10
+    container_name: elasticsearch
+    environment:
+      - node.name=elasticsearch
+      - cluster.name=es-docker-cluster
+      - discovery.type=single-node
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - elasticsearch-data:/usr/share/elasticsearch/data
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    networks:
+      - etl-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "curl --silent --fail http://localhost:9200/_cluster/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # واجهة كيبانا لإدارة Elasticsearch (اختياري)
+  kibana:
+    image: docker.elastic.co/kibana/kibana:7.17.10
+    container_name: kibana
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+    ports:
+      - "5601:5601"
+    networks:
+      - etl-network
+    restart: unless-stopped
+    depends_on:
+      elasticsearch:
+        condition: service_healthy
+
+  # أداة SQL Server Management Studio على الويب (اختياري)
+  adminer:
+    image: adminer:latest
+    container_name: adminer
+    ports:
+      - "8080:8080"
+    networks:
+      - etl-network
+    restart: unless-stopped
+    environment:
+      - ADMINER_DEFAULT_SERVER=sqlserver
+      - ADMINER_DESIGN=pepa-linha
+
+volumes:
+  sqlserver-data:
+    driver: local
+  elasticsearch-data:
+    driver: local
+
+networks:
+  etl-network:
+    driver: bridge
