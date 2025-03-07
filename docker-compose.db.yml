@@ -13,7 +13,7 @@ services:
       - "1433:1433"
     volumes:
       - sqlserver-data:/var/opt/mssql
-      - ./database-setup.sql:/docker-entrypoint-initdb.d/database-setup.sql:ro
+      - ./database-setup.sql:/scripts/database-setup.sql:ro
     networks:
       - etl-network
     restart: unless-stopped

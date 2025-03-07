@@ -40,6 +40,67 @@ This ETL service is designed to extract data from SQL Server databases and load 
 └── start-system.ps1            # PowerShell script to start the system
 ```
 
+## Environment Setup
+
+### 1. Setting Up the Database Environment
+
+This project uses Docker to create a complete development environment including SQL Server, Elasticsearch, and management tools.
+
+#### Database Components
+
+1. **SQL Server**: Source database for ETL operations
+   - Container name: `sqlserver`
+   - Version: SQL Server 2022 Express
+   - Credentials: Username `sa`, Password `Passw0rd`
+   - Port: 1433
+   - Database name: `testDb`
+
+2. **Elasticsearch**: Target for indexed data
+   - Container name: `elasticsearch`
+   - Version: 7.17.10
+   - Port: 9200
+   - Configured as a single-node cluster
+
+3. **Kibana**: Web interface for Elasticsearch
+   - Container name: `kibana`
+   - Version: 7.17.10
+   - Port: 5601
+   - Access URL: http://localhost:5601
+
+4. **Adminer**: Web-based SQL Server management tool
+   - Container name: `adminer`
+   - Port: 8080
+   - Access URL: http://localhost:8080
+   - Default server: `sqlserver`
+
+#### Database Initialization
+
+The project includes a SQL script (`database-setup.sql`) that automatically:
+
+1. Creates the `testDb` database
+2. Creates the necessary tables:
+   - `tblCustomers`: Customer information table
+   - `tblOrders`: Order information table
+3. Populates these tables with sample data
+
+The initialization scripts (`init-db.sh` for Linux/macOS and `start-system.ps1` for Windows) handle:
+
+1. Starting all Docker containers
+2. Executing the SQL initialization script
+3. Creating Elasticsearch indices with proper mappings
+
+### 2. Directory Structure Setup
+
+Before starting, ensure these directories exist:
+
+```bash
+# On Linux/macOS
+mkdir -p logs/customers logs/orders state
+
+# On Windows (PowerShell)
+New-Item -ItemType Directory -Force -Path logs\customers, logs\orders, state
+```
+
 ## Quick Start
 
 ### 1. Clone the Repository
@@ -75,6 +136,31 @@ bash ./init-db.sh
 - **Elasticsearch**: http://localhost:9200
 - **Kibana**: http://localhost:5601
 - **Adminer** (SQL Server Management): http://localhost:8080
+
+### 4. Verify Database Setup
+
+1. Open Adminer at http://localhost:8080
+2. Login with:
+   - System: MS SQL
+   - Server: sqlserver
+   - Username: sa
+   - Password: Passw0rd
+   - Database: testDb
+3. Verify that tables `tblCustomers` and `tblOrders` exist and contain sample data
+
+### 5. Verify Elasticsearch Setup
+
+1. Open Kibana at http://localhost:5601
+2. Navigate to Dev Tools
+3. Run this query to verify indices:
+   ```
+   GET _cat/indices?v
+   ```
+4. Check index mappings:
+   ```
+   GET customers/_mapping
+   GET orders/_mapping
+   ```
 
 ## Configuring ETL Tasks
 
@@ -121,9 +207,32 @@ logFile: "logs/customers/customers-sync-.log"
 stateFile: "state/customers-sync.json"
 ```
 
-## Database Setup
+## Database Management
 
-The project includes a SQL script (`database-setup.sql`) that creates the necessary database schema and populates it with sample data. This script is automatically executed when you start the system using the provided scripts.
+### Using Adminer
+
+Adminer provides a web interface for managing the SQL Server database:
+
+1. **Viewing Tables**: Click on a table name to see its structure and data
+2. **Running Queries**: Use the SQL command interface to execute custom queries
+3. **Exporting Data**: Export data in various formats (CSV, SQL, etc.)
+4. **Modifying Schema**: Add or modify tables, columns, and indexes
+
+### Using Kibana
+
+Kibana allows you to interact with Elasticsearch data:
+
+1. **Discover**: Browse and search through indexed data
+2. **Visualize**: Create charts and graphs based on your data
+3. **Dev Tools**: Execute Elasticsearch queries directly
+4. **Index Management**: Monitor index health and statistics
+
+### Modifying Sample Data
+
+To modify the sample data:
+
+1. Edit the `database-setup.sql` file
+2. Restart the containers or run the initialization script again
 
 ## Adding New ETL Tasks
 
@@ -176,14 +285,22 @@ The ETL service follows a worker service pattern:
 1. **Connection Issues**:
    - Verify SQL Server and Elasticsearch are running
    - Check connection strings in task configuration files
+   - Ensure ports are not blocked by firewall
 
 2. **No Data Synchronized**:
    - Check if data matches the incremental update condition
    - Verify the tracking column and value
+   - Check SQL query for syntax errors
 
 3. **Service Not Starting**:
    - Check logs for error messages
    - Verify Docker containers are running
+   - Ensure required directories exist
+
+4. **Database Initialization Fails**:
+   - Check SQL Server container logs: `docker logs sqlserver`
+   - Verify SQL script syntax in `database-setup.sql`
+   - Ensure SQL Server has started before running initialization
 
 ## License
 

@@ -8,7 +8,7 @@ sleep 15
 echo "u062cu0627u0631u064a u062au0646u0641u064au0630 u0633u0643u0631u064au0628u062a u0642u0627u0639u062fu0629 u0627u0644u0628u064au0627u0646u0627u062a..."
 
 # u062au0646u0641u064au0630 u0633u0643u0631u064au0628u062a SQL u062fu0627u062eu0644 u062du0627u0648u064au0629 SQL Server
-docker exec -i sqlserver /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P Passw0rd -i /docker-entrypoint-initdb.d/database-setup.sql
+docker exec -i sqlserver /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P Passw0rd -i /scripts/database-setup.sql
 
 echo "u062au0645 u062au0647u064au0626u0629 u0642u0627u0639u062fu0629 u0627u0644u0628u064au0627u0646u0627u062a u0628u0646u062cu0627u062d!"
 
