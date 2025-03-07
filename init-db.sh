@@ -1,21 +1,25 @@
 #!/bin/bash
 
-# u0633u0643u0631u064au0628u062a u0644u062au0647u064au0626u0629 u0642u0627u0639u062fu0629 u0627u0644u0628u064au0627u0646u0627u062a SQL Server u0628u0639u062f u062au0634u063au064au0644 u0627u0644u062du0627u0648u064au0627u062a
+# سكريبت لتهيئة قاعدة البيانات SQL Server بعد تشغيل الحاويات
 
-echo "u062cu0627u0631u064a u0627u0644u0627u0646u062au0638u0627u0631 u062du062au0649 u062au0643u0648u0646 u0642u0627u0639u062fu0629 u0627u0644u0628u064au0627u0646u0627u062a u062cu0627u0647u0632u0629..."
+# إنشاء هيكل المجلدات
+echo "جاري إنشاء هيكل المجلدات..."
+mkdir -p logs/customers logs/orders state data/sqlserver data/elasticsearch
+
+echo "جاري الانتظار حتى تكون قاعدة البيانات جاهزة..."
 sleep 15
 
-echo "u062cu0627u0631u064a u062au0646u0641u064au0630 u0633u0643u0631u064au0628u062a u0642u0627u0639u062fu0629 u0627u0644u0628u064au0627u0646u0627u062a..."
+echo "جاري تنفيذ سكريبت قاعدة البيانات..."
 
-# u062au0646u0641u064au0630 u0633u0643u0631u064au0628u062a SQL u062fu0627u062eu0644 u062du0627u0648u064au0629 SQL Server
+# تنفيذ سكريبت SQL داخل حاوية SQL Server
 docker exec -i sqlserver /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P Passw0rd -i /scripts/database-setup.sql
 
-echo "u062au0645 u062au0647u064au0626u0629 u0642u0627u0639u062fu0629 u0627u0644u0628u064au0627u0646u0627u062a u0628u0646u062cu0627u062d!"
+echo "تم تهيئة قاعدة البيانات بنجاح!"
 
-# u0625u0646u0634u0627u0621 u0645u0624u0634u0631u0627u062a Elasticsearch
-echo "u062cu0627u0631u064a u0625u0646u0634u0627u0621 u0645u0624u0634u0631u0627u062a Elasticsearch..."
+# إنشاء مؤشرات Elasticsearch
+echo "جاري إنشاء مؤشرات Elasticsearch..."
 
-# u0625u0646u0634u0627u0621 u0645u0624u0634u0631 u0627u0644u0639u0645u0644u0627u0621
+# إنشاء مؤشر العملاء
 curl -X PUT "http://localhost:9200/customers" -H "Content-Type: application/json" -d'
 {
   "settings": {
@@ -41,7 +45,7 @@ curl -X PUT "http://localhost:9200/customers" -H "Content-Type: application/json
   }
 }'
 
-# u0625u0646u0634u0627u0621 u0645u0624u0634u0631 u0627u0644u0637u0644u0628u0627u062a
+# إنشاء مؤشر الطلبات
 curl -X PUT "http://localhost:9200/orders" -H "Content-Type: application/json" -d'
 {
   "settings": {
@@ -74,5 +78,5 @@ curl -X PUT "http://localhost:9200/orders" -H "Content-Type: application/json" -
   }
 }'
 
-echo "u062au0645 u0625u0646u0634u0627u0621 u0645u0624u0634u0631u0627u062a Elasticsearch u0628u0646u062cu0627u062d!"
-echo "u0627u0644u0646u0638u0627u0645 u062cu0627u0647u0632 u0644u0644u0627u0633u062au062eu062fu0627u0645!"
+echo "تم إنشاء مؤشرات Elasticsearch بنجاح!"
+echo "النظام جاهز للاستخدام!"

@@ -95,10 +95,10 @@ Before starting, ensure these directories exist:
 
 ```bash
 # On Linux/macOS
-mkdir -p logs/customers logs/orders state
+mkdir -p logs/customers logs/orders state data/sqlserver data/elasticsearch
 
 # On Windows (PowerShell)
-New-Item -ItemType Directory -Force -Path logs\customers, logs\orders, state
+New-Item -ItemType Directory -Force -Path logs\customers, logs\orders, state, data\sqlserver, data\elasticsearch
 ```
 
 ## Quick Start

@@ -1,24 +1,37 @@
-# u0633u0643u0631u064au0628u062a PowerShell u0644u062au0634u063au064au0644 u0627u0644u0646u0638u0627u0645 u0639u0644u0649 Windows
+# سكريبت PowerShell لتشغيل النظام على Windows
 
-Write-Host "u062cu0627u0631u064a u062au0634u063au064au0644 u0627u0644u062du0627u0648u064au0627u062a..." -ForegroundColor Cyan
+Write-Host "جاري إنشاء هيكل المجلدات..." -ForegroundColor Cyan
 
-# u062au0634u063au064au0644 u0627u0644u062du0627u0648u064au0627u062a
+# إنشاء مجلدات السجلات
+New-Item -ItemType Directory -Force -Path logs\customers | Out-Null
+New-Item -ItemType Directory -Force -Path logs\orders | Out-Null
+
+# إنشاء مجلد الحالة
+New-Item -ItemType Directory -Force -Path state | Out-Null
+
+# إنشاء مجلدات البيانات
+New-Item -ItemType Directory -Force -Path data\sqlserver | Out-Null
+New-Item -ItemType Directory -Force -Path data\elasticsearch | Out-Null
+
+Write-Host "جاري تشغيل الحاويات..." -ForegroundColor Cyan
+
+# تشغيل الحاويات
 docker-compose up -d
 
-Write-Host "u062cu0627u0631u064a u0627u0644u0627u0646u062au0638u0627u0631 u062du062au0649 u062au0643u0648u0646 u0642u0627u0639u062fu0629 u0627u0644u0628u064au0627u0646u0627u062a u062cu0627u0647u0632u0629..." -ForegroundColor Yellow
+Write-Host "جاري الانتظار حتى تكون قاعدة البيانات جاهزة..." -ForegroundColor Yellow
 Start-Sleep -Seconds 15
 
-Write-Host "u062cu0627u0631u064a u062au0646u0641u064au0630 u0633u0643u0631u064au0628u062a u0642u0627u0639u062fu0629 u0627u0644u0628u064au0627u0646u0627u062a..." -ForegroundColor Yellow
+Write-Host "جاري تنفيذ سكريبت قاعدة البيانات..." -ForegroundColor Yellow
 
-# u062au0646u0641u064au0630 u0633u0643u0631u064au0628u062a SQL u062fu0627u062eu0644 u062du0627u0648u064au0629 SQL Server
+# تنفيذ سكريبت SQL داخل حاوية SQL Server
 docker exec -i sqlserver /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P Passw0rd -i /scripts/database-setup.sql
 
-Write-Host "u062au0645 u062au0647u064au0626u0629 u0642u0627u0639u062fu0629 u0627u0644u0628u064au0627u0646u0627u062a u0628u0646u062cu0627u062d!" -ForegroundColor Green
+Write-Host "تم تهيئة قاعدة البيانات بنجاح!" -ForegroundColor Green
 
-# u0625u0646u0634u0627u0621 u0645u0624u0634u0631u0627u062a Elasticsearch
-Write-Host "u062cu0627u0631u064a u0625u0646u0634u0627u0621 u0645u0624u0634u0631u0627u062a Elasticsearch..." -ForegroundColor Yellow
+# إنشاء مؤشرات Elasticsearch
+Write-Host "جاري إنشاء مؤشرات Elasticsearch..." -ForegroundColor Yellow
 
-# u0625u0646u0634u0627u0621 u0645u0624u0634u0631 u0627u0644u0639u0645u0644u0627u0621
+# إنشاء مؤشر العملاء
 Invoke-RestMethod -Method PUT -Uri "http://localhost:9200/customers" -ContentType "application/json" -Body @"
 {
   "settings": {
@@ -45,7 +58,7 @@ Invoke-RestMethod -Method PUT -Uri "http://localhost:9200/customers" -ContentTyp
 }
 "@
 
-# u0625u0646u0634u0627u0621 u0645u0624u0634u0631 u0627u0644u0637u0644u0628u0627u062a
+# إنشاء مؤشر الطلبات
 Invoke-RestMethod -Method PUT -Uri "http://localhost:9200/orders" -ContentType "application/json" -Body @"
 {
   "settings": {
@@ -79,15 +92,15 @@ Invoke-RestMethod -Method PUT -Uri "http://localhost:9200/orders" -ContentType "
 }
 "@
 
-Write-Host "u062au0645 u0625u0646u0634u0627u0621 u0645u0624u0634u0631u0627u062a Elasticsearch u0628u0646u062cu0627u062d!" -ForegroundColor Green
+Write-Host "تم إنشاء مؤشرات Elasticsearch بنجاح!" -ForegroundColor Green
 
-# u0639u0631u0636 u0631u0648u0627u0628u0637 u0627u0644u0648u0635u0648u0644 u0644u0644u062eu062fu0645u0627u062a
+# عرض روابط الوصول للخدمات
 Write-Host "
-u0627u0644u0646u0638u0627u0645 u062cu0627u0647u0632 u0644u0644u0627u0633u062au062eu062fu0627u0645!" -ForegroundColor Green
+النظام جاهز للاستخدام!" -ForegroundColor Green
 Write-Host "
-u064au0645u0643u0646u0643 u0627u0644u0648u0635u0648u0644 u0625u0644u0649 u0627u0644u062eu062fu0645u0627u062a u0639u0644u0649 u0627u0644u0631u0648u0627u0628u0637 u0627u0644u062au0627u0644u064au0629:" -ForegroundColor Cyan
+يمكنك الوصول إلى الخدمات على الروابط التالية:" -ForegroundColor Cyan
 Write-Host "- SQL Server: localhost:1433" -ForegroundColor White
 Write-Host "- Elasticsearch: http://localhost:9200" -ForegroundColor White
 Write-Host "- Kibana: http://localhost:5601" -ForegroundColor White
-Write-Host "- Adminer (u0625u062fu0627u0631u0629 SQL Server): http://localhost:8080" -ForegroundColor White
-Write-Host "- ETL Service: u064au0639u0645u0644 u0641u064a u0627u0644u062eu0644u0641u064au0629" -ForegroundColor White
+Write-Host "- Adminer (إدارة SQL Server): http://localhost:8080" -ForegroundColor White
+Write-Host "- ETL Service: يعمل في الخلفية" -ForegroundColor White

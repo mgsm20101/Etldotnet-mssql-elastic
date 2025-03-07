@@ -12,7 +12,7 @@ services:
     ports:
       - "1433:1433"
     volumes:
-      - sqlserver-data:/var/opt/mssql
+      - ./data/sqlserver:/var/opt/mssql
       - ./database-setup.sql:/scripts/database-setup.sql:ro
     networks:
       - etl-network
@@ -38,7 +38,7 @@ services:
         soft: -1
         hard: -1
     volumes:
-      - elasticsearch-data:/usr/share/elasticsearch/data
+      - ./data/elasticsearch:/usr/share/elasticsearch/data
     ports:
       - "9200:9200"
       - "9300:9300"
@@ -78,12 +78,6 @@ services:
     environment:
       - ADMINER_DEFAULT_SERVER=sqlserver
       - ADMINER_DESIGN=pepa-linha
-
-volumes:
-  sqlserver-data:
-    driver: local
-  elasticsearch-data:
-    driver: local
 
 networks:
   etl-network:

@@ -1,6 +1,7 @@
 version: '3.8'
 
 services:
+  # خدمة ETL الرئيسية
   etl-service:
     build: .
     container_name: etl-service
@@ -19,12 +20,6 @@ services:
         condition: service_healthy
       sqlserver:
         condition: service_healthy
-
-volumes:
-  elasticsearch-data:
-    driver: local
-  sqlserver-data:
-    driver: local
 
 networks:
   etl-network:
